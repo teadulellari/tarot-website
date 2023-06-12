@@ -6,13 +6,13 @@ const NavigationBar = () => {
 
   return (
     <nav className="w-full bg-transparent shadow h-20">
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:flex md:items-center md:px-8">
+      <div className="justify-between mx-auto lg:max-w-7xl md:flex md:items-center md:px-8 border-b border-white border-opacity-20">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <div className="flex items-center justify-center w-20 h-20 md:w-60 md:h-20">
-            <a href="javascript:void(0)" >
-            <img src={logo} alt="Logo" />
-            </a>
+            <div className="flex items-center justify-center w-20 h-20 md:w-60 md:h-22">
+              <a href="javascript:void(0)">
+                <img src={logo} alt="Logo" />
+              </a>
             </div>
             <div className="md:hidden">
               <button
