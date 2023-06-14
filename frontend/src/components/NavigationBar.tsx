@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/logo-no-background.svg';
 
-const NavigationBar = () => {
-  const [navbar, setNavbar] = useState(false);
+interface NavigationBarProps {
+  navbar: boolean;
+  setNavbar: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
+const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
   return (
     <nav className="w-full bg-transparent shadow h-20">
       <div className="justify-between mx-auto lg:max-w-7xl md:flex md:items-center md:px-8 border-b border-white border-opacity-20">
@@ -20,35 +24,17 @@ const NavigationBar = () => {
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    {/* SVG paths for the close icon */}
-                  </svg>
+                  <FaTimes className="w-6 h-6 text-white" />
                 ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    {/* SVG paths for the menu icon */}
-                  </svg>
+                  <FaBars className="w-6 h-6 text-white" />
                 )}
               </button>
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center md:justify-center flex-grow">
+        <div className={`flex items-center justify-center md:justify-center flex-grow ${navbar ? 'mt-20' : ''}`}>
           <div
-            className={`pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "" : "hidden"
-            }`}
+            className={`pb-3 md:block md:pb-0 md:mt-0 ${navbar ? '' : 'hidden'}`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-20 md:space-y-0">
               <li className="text-indigo-200 hover:text-white">
@@ -69,21 +55,15 @@ const NavigationBar = () => {
             navbar ? "" : "hidden"
           }`}
         >
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6"
-            viewBox="10 10 10 10"
-            fill="none"
-          ></svg> */}
           <div className="flex items-center space-x-3">
-          <img width="66" height="66" src="https://img.icons8.com/external-smashingstocks-outline-color-smashing-stocks/66/external-Tarot-magic-and-fairy-tales-smashingstocks-outline-color-smashing-stocks.png" alt="external-Tarot-magic-and-fairy-tales-smashingstocks-outline-color-smashing-stocks"/>
-          <a
-            href="#"
-            className="inline-block px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-purple-700 hover:bg-white mt-4 lg:mt-0"
-          >
-            Book a reading
-          </a>
-        </div>
+            <img width="66" height="66" src="https://img.icons8.com/external-smashingstocks-outline-color-smashing-stocks/66/external-Tarot-magic-and-fairy-tales-smashingstocks-outline-color-smashing-stocks.png" alt="external-Tarot-magic-and-fairy-tales-smashingstocks-outline-color-smashing-stocks"/>
+            <a
+              href="#"
+              className="inline-block px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-white hover:bg-indigo-500 mt-4 lg:mt-0"
+            >
+              Book a reading
+            </a>
+          </div>
         </div>
       </div>
     </nav>

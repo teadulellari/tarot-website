@@ -1,12 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import NavigationBar from './components/NavigationBar'
-import Slogan from './components/Slogan'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import NavigationBar from './components/NavigationBar';
+import Slogan from './components/Slogan';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-  <NavigationBar/>
-  <Slogan/>
-  </React.StrictMode>,
-)
+const App = () => {
+  const [navbar, setNavbar] = useState(false);
+
+  return (
+    <React.StrictMode>
+      <NavigationBar navbar={navbar} setNavbar={setNavbar} />
+      <Slogan extendedMenuOpen={navbar} />
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));

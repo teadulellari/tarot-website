@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 html {
   height: 100%;
@@ -8,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,4 +27,7 @@ body {
 #root {
   height: 100%;
   overflow-y: auto;
+}
+h1, h2, h3, h4 {
+  font-family: "Cinzel Decorative", serif;
 }

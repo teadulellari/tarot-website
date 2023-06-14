@@ -5,10 +5,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["Lobster", ...defaultTheme.fontFamily.sans]
-      }
+        sans: ["Roboto", ...defaultTheme.fontFamily.sans],
+      },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+};
 
