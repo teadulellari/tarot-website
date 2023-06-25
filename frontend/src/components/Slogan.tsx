@@ -1,4 +1,5 @@
 import React from "react";
+import divider from '../assets/divider.png';
 
 interface SloganProps {
   extendedMenuOpen: boolean;
@@ -7,7 +8,7 @@ interface SloganProps {
 const Slogan: React.FC<SloganProps> = ({ extendedMenuOpen }) => {
   return (
     <div className={`flex justify-center items-center h-70 ${extendedMenuOpen ? 'mt-60' : ''}`}>
-      <div className="text-white text-center max-w-lg mb-3 mt-40">
+      <div className="text-customColor2 text-center max-w-lg mb-3 mt-40">
         <h1 className="text-6xl font-bold mb-3">You deserve an answer!</h1>
         <p className="mb-8 text-lg leading-relaxed">
           Whether you have burning questions about love, career, spirituality, or personal growth,

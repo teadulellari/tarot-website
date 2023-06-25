@@ -9,7 +9,7 @@ interface NavigationBarProps {
 
 const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
   return (
-    <nav className="w-full bg-transparent shadow h-20">
+    <nav className="w-full bg-transparent ">
       <div className="justify-between mx-auto mb-30 md:flex md:items-center md:px-8 border-b border-white border-opacity-20">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
