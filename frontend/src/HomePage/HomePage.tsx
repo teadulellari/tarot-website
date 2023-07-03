@@ -19,6 +19,7 @@ import Anastasia from "../assets/Anastasia.jpeg";
 import Ryan from "../assets/Ryan.jpeg"
 import Anna from "../assets/Anna.jpeg"
 import Nikos from "../assets/Nikos.jpeg"
+import FAQ from '../components/FAQ';
 
 const HomePage: React.FC = () => {
   const [navbar, setNavbar] = useState(false);
@@ -107,6 +108,38 @@ const HomePage: React.FC = () => {
    
   ];
 
+  interface FaqData {
+    q: string;
+    a: string;
+  };
+
+  const questions: FaqData[] =[
+    {
+      q: "Q: What makes your tarot readings unique?" ,
+      a: "A: My tarot readings are unique because I combine my intuitive abilities with a deep understanding of the tarot cards. I strive to provide personalized and insightful readings that resonate with each individual's specific situation, helping them gain clarity and guidance."
+    },
+
+    {
+      q:"Q: How can your tarot readings benefit me?" ,
+      a:"A: My tarot readings can benefit you by offering valuable insights and perspectives on various aspects of your life. Whether you're seeking guidance on relationships, career choices, or personal growth, my readings can provide you with the clarity and empowerment to make informed decisions."
+    },
+    {
+      q:"Q: What is your approach to tarot readings?" ,
+      a:"A: My approach to tarot readings is compassionate, non-judgmental, and empowering. I create a safe and supportive space where you can freely express your concerns and ask your questions. Together, we explore the cards and their symbolism, unlocking the messages and guidance they hold for you."
+    },
+    {
+      q:"Q: How can I schedule a tarot reading with you?" ,
+      a:"A: Scheduling a tarot reading with me is easy! You can visit my website and navigate to the 'Book a Reading' page, where you'll find my available time slots. Simply select a date and time that works for you, and follow the prompts to secure your appointment. I offer both in-person and online readings for your convenience."
+    },
+    {
+      q:"Q: How long does it usually take to receive a tarot reading?" ,
+      a:"A: Once your payment is confirmed, I strive to provide prompt and timely service. Depending on the current demand, you can typically expect to receive your tarot reading within a couple of days. I prioritize delivering quality readings while ensuring each client receives the attention and focus they deserve. Rest assured that I will make every effort to provide your reading as soon as possible."
+    },
+    { q:"Q: Why should I trust you?",
+      a:"A: As a tarot reader, I value the trust and confidentiality of my clients. I have extensive knowledge and experience in tarot reading, and I approach each session with empathy, respect, and non-judgment. I strive to provide accurate and insightful readings that can guide and empower you. Additionally, I adhere to a professional code of ethics, ensuring your privacy and confidentiality throughout the process."
+    }
+  ];
+
   return (
     <div className="grid grid-rows-[auto,auto,1fr] gap-11">
       <NavigationBar navbar={navbar} setNavbar={setNavbar} />
@@ -114,7 +147,9 @@ const HomePage: React.FC = () => {
       <Services />
       <Experience />
       <Slider reviews={reviews} />
+      <FAQ questions={questions} />
       <Footer />
+     
     </div>
   );
 };
