@@ -11,27 +11,25 @@ interface QuestionProps {
 }
 
 const Faq: React.FC<QuestionProps> = ({ questions }) => {
-
   return (
-    <div className="container px-6 py-12 mx-auto bg-customColor1">
-      <div >
-        <div>
-        <h1 className="text-customColor2 text-2xl font-semibold mb-[50px] mt-[50px] text-center">
+    <div className="container px-4 py-8 mx-auto  max-w-[900px] bg-customColor1">
+      <div>
+        <h1 className="text-customColor2 text-xl font-semibold mb-4 mt-4 text-center">
           FREQUENTLY ASKED QUESTIONS
         </h1>
-        </div>
       </div>
-      <div className="mt-8 space-y-8 lg:mt-12">
-            {questions.map((question, index) => (
-              <div
-                key={index}
-                className="p-4 bg-customColor2 rounded-lg shadow-md mx-2"
-              >
-                <Question question={question} />
-              </div>
-            ))}
+      <div className="mt-4 space-y-4 lg:mt-6">
+        {questions.map((question, index) => (
+          <div
+            key={index}
+            className="p-2 bg-customColor2 rounded-lg shadow-md mx-2"
+          >
+            <Question question={question} />
           </div>
+        ))}
+      </div>
     </div>
   );
 };
+
 export default Faq;

@@ -42,8 +42,8 @@ const Slider: React.FC<SliderProps> = ({ reviews }) => {
   const endIndex = startIndex + reviewsPerPage;
   const visibleReviews = reviews.slice(startIndex, endIndex);
   return (
-    <div className="flex items-center justify-center mt-[200px] mb-[400px]">
-      <div className="w-[900px] h-[400px] bg-customColor1 rounded-lg p-4 shadow-md relative">
+    <div className=" mt-[200px] mb-[400px] max-w-[1000px] mx-auto">
+      <div className=" bg-customColor1 rounded-lg p-4 shadow-md relative">
         <h1 className="text-customColor2 text-2xl font-semibold mb-[50px] mt-[50px] text-center">
           Testimonials
         </h1>
