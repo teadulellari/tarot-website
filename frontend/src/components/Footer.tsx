@@ -1,17 +1,18 @@
-import React from "react";
-import { FaInstagram, FaTwitter, FaFacebook, FaTiktok } from "react-icons/fa"; // You may need to install react-icons
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa"; // You may need to install react-icons
 
 const Footer = () => {
   // Function to scroll to the top of the page
   const scrollToTop = () => {
+    console.log("started scroling")
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Use smooth scrolling for a smoother transition
+      behavior: "smooth", 
     });
+    console.log("end")
   };
 
   return (
-    <footer className="bg-customColor1 py-8">
+    <footer className="bg-customColor1 py-8 backdrop-blur-md">
       <div className="container mx-auto flex flex-col items-center text-customColor2">
         <h2 className="text-xl font-semibold mb-4">Your cup of Tea?</h2>
         <p className="mt-4 mb-8">

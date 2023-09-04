@@ -45,7 +45,7 @@ const Services = () => {
             <h1 className="text-3xl font-bold mt-8">Our Readings!</h1>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 ">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 ">
             <div className="p-8 ">
               <Service
                 img={theLovers}

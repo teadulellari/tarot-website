@@ -19,9 +19,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  /*overflow: hidden;*/
   min-height: 100vh;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(1px);
 }
 
 #root {
