@@ -14,7 +14,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <div className="flex items-center justify-center w-20 h-20 md:w-60 md:h-22">
-              <a href="javascript:void(0)">
+              <a href="#">
                 <img src={logo} alt="Logo" />
               </a>
             </div>
@@ -44,13 +44,13 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-20 md:space-y-0">
               <li className="text-indigo-200 hover:text-white">
-                <a href="javascript:void(0)">Home</a>
+                <a href="#">Home</a>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <a href="javascript:void(0)">Pages</a>
+                <a href="#">Pages</a>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <a href="javascript:void(0)">Contact</a>
+                <a href="#">Contact</a>
               </li>
             </ul>
           </div>

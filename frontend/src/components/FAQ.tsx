@@ -12,7 +12,7 @@ interface QuestionProps {
 
 const Faq: React.FC<QuestionProps> = ({ questions }) => {
   return (
-    <div className="container px-4 py-8 mx-auto  max-w-[900px] bg-customColor1">
+    <div className="container px-4 py-8 mx-auto mb-40 max-w-[1000px] bg-customColor1">
       <div>
         <h1 className="text-customColor2 text-xl font-semibold mb-4 mt-4 text-center">
           FREQUENTLY ASKED QUESTIONS

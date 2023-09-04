@@ -26,7 +26,7 @@ body {
 
 #root {
   height: 100vh;
-  overflow-y: auto; /*scroll*/
+  overflow-y: auto; 
   /*position: relative;
   z-index: 1; */
   
@@ -36,87 +36,4 @@ body {
 h1, h2, h3, h4 {
   font-family: "Cinzel Decorative", serif;
 }
-.moon-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px; /* Adjust the width as desired */
-  height: 400px; /* Adjust the height as desired */
-  border-radius: 50%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 192, 203, 0.6) 0%,
-    rgba(255, 192, 203, 0) 70%
-  );
-  filter: blur(10px);
-  z-index: -1;
-}
 
-.blend-img {
-  mix-blend-mode: overlay;
-  opacity: 0.8;
-}
-.blur-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  filter: blur(8px);
-  pointer-events: none;
-  z-index: 1;
-}
-.blur-background {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background-color: #3e4167;
-  filter: blur(15px);
-  z-index: -1;
-}
-.blur-cards {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background-color: #cac8ed;
-  filter: blur(15px);
-  z-index: 1;
-}
-
-
-
-/* Rest of your existing CSS */
-
-
-/* body::after {
-  content: "";
-  position: sticky;
-  top: 60%; 
-  left: 50%; 
-  transform: translate(-50%, -50%) rotate(0deg) scale(1);
-  width: 800px; 
-  height: 800px; 
-  background-image: url('./assets/metatrons-cube.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.6; 
- /* z-index: -1; */
-  /* animation: rotateAnimation 10s linear infinite; */
-  /* id: "rotating-element"; */
-/*} 
-
-/*@keyframes rotateAnimation {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg) scale(1);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg) scale(1.5);
-  }
-}*/
