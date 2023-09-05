@@ -9,13 +9,13 @@ interface NavigationBarProps {
 
 const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
   return (
-    <nav className="w-full bg-transparent ">
+    <nav className="w-full bg-transparent">
       <div className="justify-between mx-auto mb-30 md:flex md:items-center md:px-8 border-b border-white border-opacity-20">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <div className="flex items-center justify-center w-20 h-20 md:w-60 md:h-22">
+            <div className="flex items-center justify-center w-32 h-30 md:w-54 md:h-30 lg:w-64 lg:h-30">
               <a href="#">
-                <img src={logo} alt="Logo" />
+                <img src={logo} alt="Logo" className="object-contain h-full w-full" />
               </a>
             </div>
             <div className="md:hidden">
@@ -61,7 +61,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
             navbar ? "" : "hidden"
           }`}
         >
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center justify-center space-x-3">
             <img
               width="66"
               height="66"

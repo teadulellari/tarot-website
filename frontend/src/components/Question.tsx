@@ -17,7 +17,7 @@ const Question: React.FC<QuestionProps> = ({ question }) => {
 
   return (
     <div className="bg-customColor2">
-      <div className="text-xl font-medium mb-2 text-center">
+      <div className="text-l md:text-xl  lg:text-xl font-medium mb-2 text-center">
         <button className="flex items-center justify-between w-full" onClick={handleClick}>
           <h5 className="mx-auto">{question.q}</h5>
 

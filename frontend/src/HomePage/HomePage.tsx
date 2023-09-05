@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../assets/logo-no-background.svg";
 import Slogan from "../components/Slogan";
 import Services from "../components/Services";
 import NavigationBar from "../components/NavigationBar";
@@ -132,7 +130,7 @@ const HomePage: React.FC = () => {
       a:"A: Scheduling a tarot reading with me is easy! You can visit my website and navigate to the 'Book a Reading' page, where you'll find my available time slots. Simply select a date and time that works for you, and follow the prompts to secure your appointment. I offer both in-person and online readings for your convenience."
     },
     {
-      q:"Q: How long does it usually take to receive a tarot reading?" ,
+      q:"Q: How long does it usually take to receive a reading?" ,
       a:"A: Once your payment is confirmed, I strive to provide prompt and timely service. Depending on the current demand, you can typically expect to receive your tarot reading within a couple of days. I prioritize delivering quality readings while ensuring each client receives the attention and focus they deserve. Rest assured that I will make every effort to provide your reading as soon as possible."
     },
     { q:"Q: Why should I trust you?",
