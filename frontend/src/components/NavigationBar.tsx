@@ -47,7 +47,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
                 <a href="#">Home</a>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <a href="#">Pages</a>
+                <a href="#">Readings</a>
               </li>
               <li className="text-indigo-200 hover:text-white">
                 <a href="#">Contact</a>
@@ -69,7 +69,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
               alt="external-Tarot-magic-and-fairy-tales-smashingstocks-outline-color-smashing-stocks"
             />
             <a
-              href="#"
+              href="https://calendly.com/teadulellari/tarot-reading"
               className="inline-block px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-white hover:bg-indigo-500 mt-4 lg:mt-0"
             >
               Book a reading

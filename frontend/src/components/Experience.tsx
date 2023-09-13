@@ -24,7 +24,7 @@ const Experience = () => {
           >
             <span x-text="counter + '+'"></span>
             <span
-              x-init="() => { setInterval(() => { counter < finalCount ? counter += 100 : clearInterval(this) }, 10) }"
+              x-init="() => { setInterval(() => { counter < finalCount ? counter += 100 : clearInterval(this) }, 60) }"
             ></span>
           </div>
           <p>Satisfied clients</p>
@@ -37,7 +37,7 @@ const Experience = () => {
           >
             <span x-text="counter + '%'"></span>
             <span
-              x-init="() => { setInterval(() => { counter < finalCount ? counter++ : clearInterval(this) }, 10) }"
+              x-init="() => { setInterval(() => { counter < finalCount ? counter++ : clearInterval(this) }, 80) }"
             ></span>
           </div>
           <p>of clients booked a second reading</p>
@@ -50,7 +50,7 @@ const Experience = () => {
           >
             <span x-text="counter + '+'"></span>
             <span
-              x-init="() => { setInterval(() => { counter < finalCount ? counter++ : clearInterval(this) }, 10) }"
+              x-init="() => { setInterval(() => { counter < finalCount ? counter++ : clearInterval(this) }, 100) }"
             ></span>
           </div>
           <p>Years of providing guidance</p>
