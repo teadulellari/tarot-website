@@ -10,11 +10,10 @@ interface ReviewData {
 }
 
 interface SliderProps {
-  reviews: ReviewData[];
-  rootImageUrl: string; // Include the rootImageUrl prop
+  reviews: ReviewData[]; 
 }
 
-const Slider: React.FC<SliderProps> = ({ reviews, rootImageUrl }) => {
+const Slider: React.FC<SliderProps> = ({ reviews }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [reviewsPerPage, setReviewsPerPage] = useState(3); // Default number of reviews per page
   const totalPages = Math.ceil(reviews.length / reviewsPerPage);
@@ -102,8 +101,7 @@ const Slider: React.FC<SliderProps> = ({ reviews, rootImageUrl }) => {
                   reviewsPerPage === mobileReviewsPerPage ? "mb-4" : ""
                 }`}
               >
-                {/* Pass the rootImageUrl prop to the Review component */}
-                <Review review={review} rootImageUrl={rootImageUrl} />
+                <Review review={review}  />
               </div>
             ))}
           </div>

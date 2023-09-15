@@ -2,73 +2,73 @@
     "reviews": [
       {
         "reviewer": "John Smith",
-        "image": "./assets/reviewerImg/JohnSmith.jpeg",
+        "image": "https://i.imgur.com/TLVoDUd.jpg",
         "rating": 5,
         "content": "I had an amazing experience with this tarot reader. The insights provided were accurate and helpful. Highly recommended!"
       },
       {
         "reviewer": "Tom Johnson",
-        "image": "/assets/reviewerImg/Tom.jpeg",
+        "image": "https://i.imgur.com/JayH5F7.jpg",
         "rating": 5,
         "content": "I was impressed by the accuracy of the tarot reading. The reader was professional and created a comfortable environment. I will definitely return!"
       },
       {
         "reviewer": "Ahmet Yılmaz",
-        "image": "/assets/reviewerImg/Ahmet.jpeg",
+        "image": "https://i.imgur.com/ZeAHpJw.jpg",
         "rating": 5,
         "content": "The tarot reader was incredible! The predictions made during the session were spot on. I'm grateful for the insights I received."
       },
       {
         "reviewer": "Maria Rossi",
-        "image": "/assets/reviewerImg/Maria.jpeg",
+        "image": "https://i.imgur.com/6oYWE7m.jpg",
         "rating": 5,
         "content": "I had a fantastic experience with this tarot reader. The reading was insightful and helped me gain clarity in my life. Highly recommended!"
       },
       {
         "reviewer": "Liisa Kuusisto",
-        "image": "/assets/reviewerImg/Liisa.jpeg",
+        "image": "https://i.imgur.com/WPkWVDB.jpg",
         "rating": 4,
         "content": "The tarot reader provided a thoughtful reading. While some aspects were accurate, I would have liked more specific details. Overall, it was a good experience."
       },
       {
         "reviewer": "Sophie Leblanc",
-        "image": "/assets/reviewerImg/Sofia.jpeg",
+        "image": "https://i.imgur.com/lUyii53.jpg",
         "rating": 5,
         "content": "This tarot reader is truly gifted! The reading was insightful, and I received valuable guidance for my current situation. Highly recommended!"
       },
       {
         "reviewer": "Alejandro Fernandez",
-        "image": "/assets/reviewerImg/Alejandro.jpeg",
+        "image": "https://i.imgur.com/omwMLfC.jpg",
         "rating": 5,
         "content": "The tarot reader was exceptional! The reading provided deep insights and helped me navigate through challenging times. I'm grateful for the experience!"
       },
       {
         "reviewer": "Anastasia Ivanova",
-        "image": "/assets/reviewerImg/Anastasia.jpeg",
+        "image": "https://i.imgur.com/X1XvaGA.jpg",
         "rating": 4,
         "content": "I had a positive experience with this tarot reader. The reading was accurate, and the reader was professional and compassionate. Thank you!"
       },
       {
         "reviewer": "Ryan Johnson",
-        "image": "/assets/reviewerImg/Ryan.jpeg",
+        "image": "https://i.imgur.com/q62qYaF.jpg",
         "rating": 5,
         "content": "I highly recommend this tarot reader. The session was enlightening, and I gained valuable perspective on my life. Thank you for the guidance!"
       },
       {
         "reviewer": "Elena Petrova",
-        "image": "/assets/reviewerImg/Elena.jpeg",
+        "image": "https://i.imgur.com/btGIdbo.jpg",
         "rating": 4,
         "content": "I enjoyed my tarot reading session. The reader was knowledgeable and provided valuable guidance. I would come back again!"
       },
       {
         "reviewer": "Hannah Müller",
-        "image": "/assets/reviewerImg/Anna.jpeg",
+        "image": "https://i.imgur.com/eAn8gDI.jpg",
         "rating": 5,
         "content": "I had an amazing tarot reading experience. The reader was insightful and provided valuable advice. I left the session feeling empowered."
       },
       {
         "reviewer": "Nikos Papadopoulos",
-        "image": "/assets/reviewerImg/Nikos.jpeg",
+        "image": "https://i.imgur.com/bvzg2ZE.jpg",
         "rating": 4,
         "content": "The tarot reader was knowledgeable and provided accurate insights. I appreciate the guidance I received during the reading."
       }

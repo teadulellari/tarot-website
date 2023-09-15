@@ -7,10 +7,10 @@ interface ReviewProps {
     rating: number;
     content: string;
   };
-  rootImageUrl: string;
+
 }
 
-const Review: React.FC<ReviewProps> = ({ review, rootImageUrl}) => {
+const Review: React.FC<ReviewProps> = ({ review }) => {
   return (
     <div className="flex flex-col items-center">
       <div className="w-16 h-16 rounded-full overflow-hidden mb-4">

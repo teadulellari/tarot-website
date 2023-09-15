@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo-no-background.svg";
 
