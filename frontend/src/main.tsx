@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import HomePage from './HomePage/HomePage';
-import Services from './components/Services'; // Import the Services component
 import ReadingDetails from './components/ReadingDetails';
 
 const App = () => {
@@ -17,4 +16,7 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = document.getElementById('root'); // or your target DOM element
+
+// Use ReactDOM.render
+ReactDOM.render(<App />, root);

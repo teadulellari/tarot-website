@@ -8,7 +8,7 @@ import Slider from "../components/Slider";
 import FAQ from "../components/FAQ";
 import reviewData from "../data/reviewData.json";
 import faqData from "../data/faqData.json";
-//import "./homePage.css";
+import "./homePage.css";
 
 const HomePage: React.FC = () => {
   const [navbar, setNavbar] = useState(false);
@@ -16,32 +16,35 @@ const HomePage: React.FC = () => {
   const { reviews } = reviewData;
   const { questions } = faqData;
 
-
   useEffect(() => {
-    // Define a function to handle the scroll event
     const handleScroll = () => {
+      console.log(1)
       const elementsToAnimate = document.querySelectorAll(".hidden");
-
+      console.log(2)
       elementsToAnimate.forEach((element) => {
+        console.log(3)
         const elementTop = element.getBoundingClientRect().top;
+        console.log(elementTop)
         const windowHeight = window.innerHeight;
+        console.log(windowHeight)
 
-        // If the top of the element is within the viewport, add the 'visible' class
         if (elementTop < windowHeight) {
           element.classList.add("animated");
           element.classList.remove("hidden");
+        } else {
+          // If the element has scrolled out of the viewport, add the "hidden-scroll" class
+          element.classList.add("hidden-scroll");
+          element.classList.remove("animated");
         }
       });
     };
 
-    // Add the scroll event listener when the component mounts
     window.addEventListener("scroll", handleScroll);
 
-    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [window]);
+  }, []);
 
   return (
     <div className="grid grid-rows-[auto,auto,1fr] gap-11">
@@ -54,7 +57,7 @@ const HomePage: React.FC = () => {
         <Experience />
       </div>
       <div className="animated">
-        <Slider reviews={reviews}/>
+        <Slider reviews={reviews} />
       </div>
       <div className="animated">
         <FAQ questions={questions} />
