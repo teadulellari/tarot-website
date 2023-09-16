@@ -68,7 +68,7 @@ const Slider: React.FC<SliderProps> = ({ reviews }) => {
   }, []);
 
   return (
-    <div className="mt-[200px] mb-[400px] max-w-[1000px] mx-auto">
+    <div className="mt-[200px] mb-[150px] max-w-[1000px] mx-auto">
       <div className="bg-customColor1 rounded-lg p-4 shadow-md relative">
         <h1 className="text-customColor2 text-2xl font-semibold mb-[50px] mt-[50px] text-center">
           Testimonials

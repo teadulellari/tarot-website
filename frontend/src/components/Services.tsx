@@ -1,9 +1,10 @@
 import React from "react";
-import theLovers from "../assets/The Lovers1.png";
-import theEmpress from "../assets/The Lovers2.png";
-import twoOfSwords from "../assets/The Lovers3.png";
-import aceOfPnt from "../assets/The Lovers4.png";
+import theLovers from "../assets/TheLovers1.png";
+import theEmpress from "../assets/TheLovers2.png";
+import twoOfSwords from "../assets/TheLovers3.png";
+import aceOfPnt from "../assets/TheLovers4.png";
 import { Link } from 'react-router-dom';
+
 interface ServiceProps {
   img: string;
   title: string;
@@ -37,24 +38,22 @@ const Service: React.FC<ServiceProps> = ({ img, title, button, serviceLink }) =>
   );
 };
 
-
 const Services = () => {
   return (
-    <div className="flex justify-center items-center py-8 mx-auto ">
+    <div className="flex justify-center items-center py-8 mx-auto">
       <div className="max-w-[1300px]">
         <div className="text-customColor2 text-center">
           <div className="flex justify-center items-center mb-12">
             <h1 className="text-2xl font-bold mt-8">Our Readings!</h1>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 ">
-            <div className="p-8 ">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
+            <div className="p-8">
               <Service
                 img={theLovers}
                 title="Love Reading"
                 button="Learn More"
-                serviceLink="/love-reading-details" 
-                
+                serviceLink="/reading/love-reading/details"
               />
             </div>
             <div className="p-8">
@@ -62,7 +61,7 @@ const Services = () => {
                 img={theEmpress}
                 title="General Reading"
                 button="Learn More"
-                serviceLink="/love-reading-details" 
+                serviceLink="reading/general-reading/details"
               />
             </div>
             <div className="p-8">
@@ -70,15 +69,15 @@ const Services = () => {
                 img={twoOfSwords}
                 title="Decision Making Reading"
                 button="Learn More"
-                serviceLink="/love-reading-details" 
+                serviceLink="reading/decision-making-reading/details"
               />
             </div>
             <div className="p-8">
               <Service
                 img={aceOfPnt}
-                title="Spritiual Guidance reading"
+                title="Spiritual Guidance Reading"
                 button="Learn More"
-                serviceLink="/love-reading-details" 
+                serviceLink="reading/spiritual-guidance-reading/details"
               />
             </div>
           </div>
