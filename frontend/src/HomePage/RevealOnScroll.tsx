@@ -21,14 +21,14 @@ const RevealOnScroll: React.FC<RevealOnScrollProps> = ({ children }) => {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.4, // Adjust this threshold as needed
+        threshold: 0.4, 
       }
     );
 
     observer.observe(element);
 
     return () => {
-      observer.unobserve(element);
+      observer.unobserve(element);// cleaning up
     };
   }, []);
 

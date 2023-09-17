@@ -1,11 +1,12 @@
-// src/components/ReadingDetails.tsx
-import React from "react";
+import { FC } from "react";
 import { useParams } from "react-router-dom";
 import theLovers from "../assets/TheLovers1.png";
 import theEmpress from "../assets/TheLovers2.png";
 import twoOfSwords from "../assets/TheLovers3.png";
 import aceOfPnt from "../assets/TheLovers4.png";
-
+import SuggestionCard from "./SuggestionCard"; // Import the SuggestionCard component
+import { useNavigate } from "react-router-dom";
+import RevealOnScroll from "../HomePage/RevealOnScroll";
 interface ServiceProps {
   img: string;
   title: string;
@@ -14,10 +15,16 @@ interface ServiceProps {
   reasonsToChoose: string[];
 }
 
-const ReadingDetails: React.FC = () => {
-  const { readingType } = useParams<{ readingType: string }>();
+interface ReadingDetailsParams {
+  readingType: string;
+  [key: string]: string | undefined;
+}
 
-  const readingData: { [key: string]: ServiceProps } = {
+const ReadingDetails: FC = () => {
+  const readingType = useParams<ReadingDetailsParams>()?.readingType;
+  const navigate = useNavigate();
+
+  const readingData: Record<string, ServiceProps> = {
     "love-reading": {
       img: theLovers,
       title: "Love Reading",
@@ -67,8 +74,6 @@ const ReadingDetails: React.FC = () => {
       ],
     },
   };
-  
-  
 
   const service = readingType ? readingData[readingType] : null;
 
@@ -76,9 +81,21 @@ const ReadingDetails: React.FC = () => {
     return <div>Reading not found.</div>;
   }
 
+  // Define related readings for each reading type
+  const relatedReadings: Record<string, string[]> = {
+    "love-reading": ["general-reading", "decision-making-reading", "spiritual-guidance-reading"],
+    "general-reading": ["love-reading", "decision-making-reading", "spiritual-guidance-reading"],
+    "decision-making-reading": ["love-reading", "general-reading", "spiritual-guidance-reading"],
+    "spiritual-guidance-reading": ["love-reading", "general-reading", "decision-making-reading"],
+  };
+
+  // Get related readings for the current reading type
+  const suggestions = readingType ? relatedReadings[readingType] : [];
+
   return (
     <div className="min-h-screen bg-customColor1 p-8">
       <div className="container mx-auto">
+        <RevealOnScroll>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           <div className="mx-auto w-full md:w-80 h-96 rounded-lg shadow-lg overflow-hidden text-center">
             <img
@@ -100,7 +117,7 @@ const ReadingDetails: React.FC = () => {
               <h2 className="text-center text-lg md:text-xl font-semibold text-[#e1be8a]">
                 What to Expect
               </h2>
-              <p className=" list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
+              <p className="list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
                 {service.description}
               </p>
             </div>
@@ -123,7 +140,10 @@ const ReadingDetails: React.FC = () => {
               <div className="mt-4">
                 <a
                   href="https://calendly.com/teadulellari/tarot-reading"
-                  className="inline-block px-6 py-3 text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 hover:shadow-lg transition duration-300"
+                  className="inline-block px-6 py-3 text-customColor1 bg-customColor2 rounded-lg hover:bg-white hover:shadow-lg transition duration-300"
+                  onClick={() => {
+                    navigate(`/reading/${readingType}/details`);
+                  }}
                 >
                   Book a Reading
                 </a>
@@ -131,7 +151,21 @@ const ReadingDetails: React.FC = () => {
             </div>
           </div>
         </div>
+        </RevealOnScroll>
       </div>
+
+      <section className="related-readings mt-40">
+        <RevealOnScroll>
+        <h2 className="text-center text-xl md:text-2xl font-semibold text-[#e1be8a] mb-10">
+          Related Readings
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          {suggestions.map((readingType) => (
+            <SuggestionCard key={readingType} reading={readingData[readingType]} />
+          ))}
+        </div>
+        </RevealOnScroll>
+      </section>
     </div>
   );
 };

@@ -1,15 +1,16 @@
-import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa"; // You may need to install react-icons
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   // Function to scroll to the top of the page
   const scrollToTop = () => {
-    console.log("started scrolling");
     window.scrollTo({
-      top: 20,
-      behavior: "smooth",
-    });
-    console.log("end");
+      top: 0, 
+      behavior: 'smooth'
+    })
+      
   };
+  
+  
 
   return (
     <footer className="bg-customColor1 py-8 backdrop-blur-md">
