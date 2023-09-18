@@ -21,7 +21,7 @@ const RevealOnScroll: React.FC<RevealOnScrollProps> = ({ children }) => {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.2, 
+        threshold: 0.16, 
       }
     );
 

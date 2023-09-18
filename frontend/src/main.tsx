@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import HomePage from './HomePage/HomePage';
 import ReadingDetails from './components/ReadingDetails';
+import AboutMe from './components/AboutMe';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/reading/:readingType/details" element={<ReadingDetails />} />
+        <Route path="/about-me/" element={<AboutMe />}/>
       </Routes>
     </BrowserRouter>
   );

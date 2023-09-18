@@ -8,7 +8,7 @@ import Slider from "../components/Slider";
 import FAQ from "../components/FAQ";
 import reviewData from "../data/reviewData.json";
 import faqData from "../data/faqData.json";
-import RevealOnScroll from "./RevealOnScroll"; // Import the RevealOnScroll component
+import RevealOnScroll from "./RevealOnScroll"; 
 
 const HomePage: React.FC = () => {
   const [navbar, setNavbar] = useState(false);

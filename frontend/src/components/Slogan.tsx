@@ -1,11 +1,11 @@
 import React from "react";
-import divider from '../assets/divider.png';
-
+import { useNavigate } from "react-router-dom";
 interface SloganProps {
   extendedMenuOpen: boolean;
 }
 
 const Slogan: React.FC<SloganProps> = ({ extendedMenuOpen }) => {
+  const navigate= useNavigate();
 
   return (
     <div className={`p-10 lg:p-0 md:p-0 flex justify-center items-center h-70`}>
@@ -21,7 +21,9 @@ const Slogan: React.FC<SloganProps> = ({ extendedMenuOpen }) => {
           <br />
           Your destiny is within reach.
         </p>
-        <button className="leading-none border rounded text-white border-white hover:text-purple-700 hover:bg-white py-2 px-4 rounded-full">
+        <button className="leading-none border rounded text-white border-white hover:text-purple-700 hover:bg-white py-2 px-4 rounded-full" onClick={() => {
+                      navigate(`/about-me`);
+                    }}>
           Find out more
         </button>
       </div>
