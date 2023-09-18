@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { useParams } from "react-router-dom";
 import theLovers from "../assets/TheLovers1.png";
 import theEmpress from "../assets/TheLovers2.png";
@@ -7,6 +7,8 @@ import aceOfPnt from "../assets/TheLovers4.png";
 import SuggestionCard from "./SuggestionCard"; // Import the SuggestionCard component
 import { useNavigate } from "react-router-dom";
 import RevealOnScroll from "../HomePage/RevealOnScroll";
+import NavigationBar from "./NavigationBar";
+import Footer from "./Footer";
 interface ServiceProps {
   img: string;
   title: string;
@@ -23,6 +25,7 @@ interface ReadingDetailsParams {
 const ReadingDetails: FC = () => {
   const readingType = useParams<ReadingDetailsParams>()?.readingType;
   const navigate = useNavigate();
+  const [navbar, setNavbar] = useState(false);
 
   const readingData: Record<string, ServiceProps> = {
     "love-reading": {
@@ -91,79 +94,96 @@ const ReadingDetails: FC = () => {
 
   // Get related readings for the current reading type
   const suggestions = readingType ? relatedReadings[readingType] : [];
-
+ if(navbar ){
+  return(
+    <div className="bg-customColor1 h-full border-none">
+    <NavigationBar navbar={navbar} setNavbar={setNavbar} />
+    </div>
+  )
+ }
   return (
-    <div className="min-h-screen bg-customColor1 p-8">
-      <div className="container mx-auto">
-        <RevealOnScroll>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          <div className="mx-auto w-full md:w-80 h-96 rounded-lg shadow-lg overflow-hidden text-center">
-            <img
-              src={service.img}
-              alt={service.title}
-              className="inline-block align-middle w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="flex flex-col justify-center items-center">
-            <h1 className="text-2xl md:text-3xl font-semibold text-[#e1be8a]">
-              {service.title}
-            </h1>
-            <p className="text-base md:text-lg font-semibold mt-2 text-customColor1">
-              Price: {service.price}
-            </p>
-
-            <div className="mt-6 md:mt-10">
-              <h2 className="text-center text-lg md:text-xl font-semibold text-[#e1be8a]">
-                What to Expect
-              </h2>
-              <p className="list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
-                {service.description}
-              </p>
+    <div className="min-h-screen bg-customColor1 grid grid-rows-[auto,1fr,auto,auto] gap-10">
+      <section>
+        <NavigationBar navbar={navbar} setNavbar={setNavbar} />
+      </section>
+      <section className="p-10">
+      <RevealOnScroll>
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="mx-auto w-full md:w-80 h-96 rounded-lg shadow-lg overflow-hidden text-center">
+              <img
+                src={service.img}
+                alt={service.title}
+                className="inline-block align-middle w-full h-full object-cover"
+              />
             </div>
 
-            <div className="mt-6 md:mt-10">
-              <h2 className="text-lg md:text-xl font-semibold text-[#e1be8a] text-center">
-                Why Choose Tea Leaf Tarot?
-              </h2>
-              <ul className="list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
-                {service.reasonsToChoose.map((reason, index) => (
-                  <li key={index}>{reason}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-6 md:mt-10 text-center">
-              <p className="text-base md:text-lg text-[#e1be8a]">
-                If you're ready, book a reading in Calendly.
+            <div className="flex flex-col justify-center items-center">
+              <h1 className="text-center text-2xl md:text-3xl font-semibold text-[#e1be8a]">
+                {service.title}
+              </h1>
+              <p className="text-base md:text-lg font-semibold mt-2 text-customColor1">
+                Price: {service.price}
               </p>
-              <div className="mt-4">
-                <a
-                  href="https://calendly.com/teadulellari/tarot-reading"
-                  className="inline-block px-6 py-3 text-customColor1 bg-customColor2 rounded-lg hover:bg-white hover:shadow-lg transition duration-300"
-                  onClick={() => {
-                    navigate(`/reading/${readingType}/details`);
-                  }}
-                >
-                  Book a Reading
-                </a>
+
+              <div className="mt-6 md:mt-10">
+                <h2 className="text-center text-lg md:text-xl font-semibold text-[#e1be8a]">
+                  What to Expect
+                </h2>
+                <p className="list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
+                  {service.description}
+                </p>
+              </div>
+
+              <div className="mt-6 md:mt-10">
+                <h2 className="text-lg md:text-xl font-semibold text-[#e1be8a] text-center">
+                  Why Choose Tea Leaf Tarot?
+                </h2>
+                <ul className="list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
+                  {service.reasonsToChoose.map((reason, index) => (
+                    <li key={index}>{reason}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-6 md:mt-10 text-center">
+                <p className="text-base md:text-lg text-[#e1be8a]">
+                  If you're ready, book a reading in Calendly.
+                </p>
+                <div className="mt-4">
+                  <a
+                    href="https://calendly.com/teadulellari/tarot-reading"
+                    className="inline-block px-6 py-3 text-customColor1 bg-customColor2 rounded-lg hover:bg-white hover:shadow-lg transition duration-300"
+                    onClick={() => {
+                      navigate(`/reading/${readingType}/details`);
+                    }}
+                  >
+                    Book a Reading
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        </RevealOnScroll>
-      </div>
-
-      <section className="related-readings mt-40">
+      </RevealOnScroll>
+      </section>
+      <section className="related-readings mt-40 p-10">
         <RevealOnScroll>
-        <h2 className="text-center text-xl md:text-2xl font-semibold text-[#e1be8a] mb-10">
-          Related Readings
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {suggestions.map((readingType) => (
-            <SuggestionCard key={readingType} reading={readingData[readingType]} />
-          ))}
-        </div>
+          <div className="container mx-auto">
+            <h2 className="text-center text-xl md:text-2xl font-semibold text-[#e1be8a] mb-10">
+              Related Readings
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+              {suggestions.map((readingType) => (
+                <SuggestionCard key={readingType} reading={readingData[readingType]} />
+              ))}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+      <section className="mt-40">
+        <RevealOnScroll>
+        <Footer />
         </RevealOnScroll>
       </section>
     </div>

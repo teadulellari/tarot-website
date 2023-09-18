@@ -8,9 +8,9 @@ interface SloganProps {
 const Slogan: React.FC<SloganProps> = ({ extendedMenuOpen }) => {
 
   return (
-    <div className={`flex justify-center items-center h-70 ${extendedMenuOpen ? 'mt-40' : ''}`}>
-      <div className="text-customColor2 text-center max-w-lg mb-3 lg:mt-40 md:mt-40">
-        <h1 className="lg:text-6xl text-3xl font-bold mb-3">You deserve an answer!</h1>
+    <div className={`p-10 lg:p-0 md:p-0 flex justify-center items-center h-70`}>
+      <div className="text-customColor2 text-center max-w-lg mb-3 lg:mt-20 md:mt-20">
+        <h1 className="lg:text-6xl  md:text-5xl text-3xl font-bold mb-3">You deserve an answer!</h1>
         <p className="mb-8 text-lg leading-relaxed">
           Whether you have burning questions about love, career, spirituality, or personal growth,
           our Tarot readings provide the answers you seek.

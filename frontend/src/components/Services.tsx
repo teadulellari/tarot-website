@@ -15,7 +15,7 @@ interface ServiceProps {
 const Service: React.FC<ServiceProps> = ({ img, title, button, serviceLink }) => {
   return (
     <div className="flex flex-col h-full">
-      <div className="w-[250px] h-full bg-customColor1 rounded-lg p-4 shadow-md">
+      <div className="w-full h-full bg-customColor1 rounded-lg p-4 shadow-md">
         <div className="relative bg-customColor2 rounded-lg overflow-hidden flex-grow h-full flex flex-col">
           <img src={img} alt={title} className="w-full h-auto max-h-[400px]" />
           <div className="p-4 relative z-10 flex-grow flex flex-col justify-between">

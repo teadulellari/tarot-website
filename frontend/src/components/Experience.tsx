@@ -20,7 +20,7 @@ const Experience = () => {
           <img src={hands} alt="hands" className="w-[100px] h-[100px] mx-auto" />
           <div
             x-data="{ counter: 0, finalCount: 20000 }"
-            className="text-4xl font-bold text-customColor2"
+            className="text-3xl font-bold text-customColor2"
           >
             <span x-text="counter + '+'"></span>
             <span
@@ -33,7 +33,7 @@ const Experience = () => {
           <img src={feather} alt="feather" className="w-[100px] h-[100px] mx-auto" />
           <div
             x-data="{ counter: 0, finalCount: 97 }"
-            className="text-4xl font-bold text-customColor2"
+            className="text-3xl font-bold text-customColor2"
           >
             <span x-text="counter + '%'"></span>
             <span
@@ -46,7 +46,7 @@ const Experience = () => {
           <img src={wand} alt="wand" className="w-[100px] h-[100px] mx-auto" />
           <div
             x-data="{ counter: 0, finalCount: 10 }"
-            className="text-4xl font-bold text-customColor2"
+            className="text-3xl font-bold text-customColor2"
           >
             <span x-text="counter + '+'"></span>
             <span

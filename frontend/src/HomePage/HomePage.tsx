@@ -16,6 +16,12 @@ const HomePage: React.FC = () => {
   const { reviews } = reviewData;
   const { questions } = faqData;
 
+  if(navbar ){
+    return(
+      <NavigationBar navbar={navbar} setNavbar={setNavbar}/>
+    )
+  }
+
   return (
     <div className="grid grid-rows-[auto,auto,1fr] gap-11">
       <NavigationBar navbar={navbar} setNavbar={setNavbar} />
