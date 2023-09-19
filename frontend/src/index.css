@@ -5,6 +5,8 @@
 
 html {
   min-height: 100%;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -22,6 +24,9 @@ body {
   overflow-y: auto;
   min-height: 100vh;
   backdrop-filter: blur(1px);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
 }
 
 #root {

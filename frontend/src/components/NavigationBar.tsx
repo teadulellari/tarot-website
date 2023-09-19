@@ -1,5 +1,6 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo-no-background.svg";
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 interface NavigationBarProps {
   navbar: boolean;
@@ -7,8 +8,16 @@ interface NavigationBarProps {
 }
 
 const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
   return (
-    <nav className="w-full bg-transparent">
+    <nav id="top" className="w-full bg-transparent">
       <div className="justify-between mx-auto mb-30 md:flex md:items-center md:px-8 border-b border-white border-opacity-20">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -43,13 +52,13 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-20 md:space-y-0">
               <li className="text-indigo-200 hover:text-white">
-                <a href="#">Home</a>
+                <a href="/about-me/">About Me</a>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <a href="#">Readings</a>
+              <a href="#services" onClick={() => scrollToSection("services")}>Readings</a>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <a href="#">Contact</a>
+                <a href="#contact" onClick={() => scrollToSection("contact")}>Contact</a>
               </li>
             </ul>
           </div>

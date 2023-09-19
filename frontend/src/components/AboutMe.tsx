@@ -19,7 +19,7 @@ const AboutMe: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-customColor1">
+    <div id="about" className="min-h-screen bg-customColor1">
       <NavigationBar navbar={navbar} setNavbar={setNavbar} />
       <div className="container mx-auto mt-10">
         <RevealOnScroll>
