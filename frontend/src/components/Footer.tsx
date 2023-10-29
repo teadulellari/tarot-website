@@ -1,4 +1,4 @@
-import { FaInstagram, FaFacebook, FaTiktok, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaTiktok, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   // Function to scroll to the top of the page
@@ -22,25 +22,25 @@ const Footer = () => {
         </p>
         <div className="flex space-x-4 mb-4 ">
           <a
-            href="#"
+            href="https://www.instagram.com/tea_leaf_tarot/"
             className="text-2xl hover:text-[#EF94CA] transition duration-300 hover:scale-110"
           >
             <FaInstagram />
           </a>
           <a
-            href="#"
+            href="https://www.tiktok.com/@tea.leaf.tarot"
             className="text-2xl hover:text-[#EF94CA] transition duration-300 hover:scale-110"
           >
             <FaTiktok />
           </a>
           <a
-            href="#"
+            href="https://wa.link/w74pkr"
             className="text-2xl hover:text-[#EF94CA] transition duration-300 hover:scale-110"
           >
-            <FaFacebook />
+            <FaWhatsapp />
           </a>
           <a
-            href="#"
+            href="mailto:hello@tarotcardread.com"
             className="text-2xl hover:text-[#EF94CA] transition duration-300 hover:scale-110"
           >
             <FaEnvelope />
