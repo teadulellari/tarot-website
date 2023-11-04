@@ -1,6 +1,6 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo-no-background.svg";
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from "react-router-dom";
 
 interface NavigationBarProps {
   navbar: boolean;
@@ -52,13 +52,13 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-20 md:space-y-0">
               <li className="text-indigo-200 hover:text-white">
-                <a href="/about-me/">About Me</a>
+                <Link to="/about-me/">About Me</Link>
               </li>
               <li className="text-indigo-200 hover:text-white">
-              <a href="#services" onClick={() => scrollToSection("services")}>Readings</a>
+                <Link to="/#services">Readings</Link>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <a href="#contact" onClick={() => scrollToSection("contact")}>Contact</a>
+                <Link to="/#contact">Contact</Link>
               </li>
             </ul>
           </div>
