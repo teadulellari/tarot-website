@@ -7,7 +7,6 @@ import aceOfPnt from "../assets/TheLovers4.png";
 import SuggestionCard from "./SuggestionCard"; // Import the SuggestionCard component
 import { useNavigate } from "react-router-dom";
 import RevealOnScroll from "../HomePage/RevealOnScroll";
-import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 interface ServiceProps {
   img: string;
@@ -25,7 +24,6 @@ interface ReadingDetailsParams {
 const ReadingDetails: FC = () => {
   const readingType = useParams<ReadingDetailsParams>()?.readingType;
   const navigate = useNavigate();
-  const [navbar, setNavbar] = useState(false);
 
   const readingData: Record<string, ServiceProps> = {
     "love-reading": {
@@ -94,17 +92,9 @@ const ReadingDetails: FC = () => {
 
   // Get related readings for the current reading type
   const suggestions = readingType ? relatedReadings[readingType] : [];
- if(navbar ){
-  return(
-    <div className="bg-customColor1 h-full border-none">
-    <NavigationBar navbar={navbar} setNavbar={setNavbar} />
-    </div>
-  )
- }
   return (
     <div className="min-h-screen bg-customColor1 grid grid-rows-[auto,1fr,auto,auto] gap-10">
       <section>
-        <NavigationBar navbar={navbar} setNavbar={setNavbar} />
       </section>
       <section className="p-10">
       <RevealOnScroll>

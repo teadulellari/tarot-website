@@ -1,10 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-interface SloganProps {
-  extendedMenuOpen: boolean;
-}
+interface SloganProps {}
 
-const Slogan: React.FC<SloganProps> = ({ extendedMenuOpen }) => {
+const Slogan: React.FC<SloganProps> = () => {
   const navigate= useNavigate();
 
   return (

@@ -1,27 +1,15 @@
 import React, { useState } from "react";
 import RevealOnScroll from "../HomePage/RevealOnScroll";
 import Footer from "./Footer";
-import NavigationBar from "./NavigationBar";
 import Grandma from "../assets/grandma.jpg";
 import Me from "../assets/aboutMe.jpeg";
 import TarotIllustration from "../assets/readingImage.png"
 
 
 const AboutMe: React.FC = () => {
-  const [navbar, setNavbar] = useState(false);
-
-  if (navbar) {
-    return (
-      <div className="bg-customColor1 h-full border-none">
-        <NavigationBar navbar={navbar} setNavbar={setNavbar} />
-      </div>
-    );
-  }
-
   return (
     <div id="about" className="min-h-screen bg-customColor1">
-      <NavigationBar navbar={navbar} setNavbar={setNavbar} />
-      <div className="container mx-auto mt-10">
+      <div className="container mx-auto pt-10">
         <RevealOnScroll>
           <h2 className="text-center text-xl md:text-3xl font-semibold text-[#e1be8a]">
             About Me

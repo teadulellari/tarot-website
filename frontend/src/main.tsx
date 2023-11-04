@@ -5,10 +5,12 @@ import './index.css';
 import HomePage from './HomePage/HomePage';
 import ReadingDetails from './components/ReadingDetails';
 import AboutMe from './components/AboutMe';
+import NavigationBar from './components/NavigationBar';
 
 const App = () => {
   return (
     <BrowserRouter>
+      <NavigationBar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/reading/:readingType/details" element={<ReadingDetails />} />
