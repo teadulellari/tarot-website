@@ -3,29 +3,21 @@ import logo from "../assets/logo-no-background.svg";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
-interface NavigationBarProps {}
+interface NavigationBarProps {
+  scrollTo: (identifier: string) => void
+}
 
-const NavigationBar: React.FC<NavigationBarProps> = () => {
+const NavigationBar: React.FC<NavigationBarProps> = ({scrollTo}) => {
   const [navbar, setNavbar] = useState(false);
   const location = useLocation();
-  console.log(location.pathname)
-  const scrollToSection = (sectionId: string) => {
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({
-          behavior: "smooth",
-        });
-      }
-    }, 100);
-  };
+  
   return (
     <nav id="top" className={location.pathname == "/" ? "w-full bg-transparent" : "w-full bg-customColor1"}>
       <div className="justify-between mx-auto mb-30 md:flex md:items-center md:px-8 border-b border-white border-opacity-20">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <div className="flex items-center justify-center w-32 h-30 md:w-54 md:h-30 lg:w-64 lg:h-30">
-              <Link to="/" onClick={() => scrollToSection("#")}>
+              <Link to="/" onClick={() => scrollTo("#")}>
                 <img src={logo} alt="Logo" className="object-contain h-full w-full" />
               </Link>
             </div>
@@ -58,10 +50,10 @@ const NavigationBar: React.FC<NavigationBarProps> = () => {
                 <Link to="/about-me/">About Me</Link>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <Link to="/#services" onClick={() => scrollToSection("services")}>Readings</Link>
+                <Link to="/#services" onClick={() => scrollTo("services")}>Readings</Link>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <Link to="/#contact" onClick={() => scrollToSection("contact")}>Contact</Link>
+                <Link to="/#contact" onClick={() => scrollTo("contact")}>Contact</Link>
               </li>
             </ul>
           </div>

@@ -1,5 +1,5 @@
-import { FC, useState } from "react";
-import { useParams } from "react-router-dom";
+import { FC, useEffect, useState } from "react";
+import { useLocation, useParams } from "react-router-dom";
 import theLovers from "../assets/TheLovers1.png";
 import theEmpress from "../assets/TheLovers2.png";
 import twoOfSwords from "../assets/TheLovers3.png";
@@ -21,9 +21,18 @@ interface ReadingDetailsParams {
   [key: string]: string | undefined;
 }
 
-const ReadingDetails: FC = () => {
+interface ReadingDetailsProps {
+  scrollTo: (identifier: string) => void
+}
+
+const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
   const readingType = useParams<ReadingDetailsParams>()?.readingType;
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    scrollTo("top")
+  }, [location]);
 
   const readingData: Record<string, ServiceProps> = {
     "love-reading": {
@@ -93,7 +102,7 @@ const ReadingDetails: FC = () => {
   // Get related readings for the current reading type
   const suggestions = readingType ? relatedReadings[readingType] : [];
   return (
-    <div className="min-h-screen bg-customColor1 grid grid-rows-[auto,1fr,auto,auto] gap-10">
+    <div id="details" className="min-h-screen bg-customColor1 grid grid-rows-[auto,1fr,auto,auto] gap-10">
       <section>
       </section>
       <section className="p-10">

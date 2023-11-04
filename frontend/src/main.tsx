@@ -7,13 +7,24 @@ import ReadingDetails from './components/ReadingDetails';
 import AboutMe from './components/AboutMe';
 import NavigationBar from './components/NavigationBar';
 
+const scrollToSection = (sectionId: string) => {
+  setTimeout(() => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, 100);
+};
+
 const App = () => {
   return (
     <BrowserRouter>
-      <NavigationBar/>
+      <NavigationBar scrollTo={scrollToSection}/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/reading/:readingType/details" element={<ReadingDetails />} />
+        <Route path="/reading/:readingType/details" element={<ReadingDetails scrollTo={scrollToSection} />} />
         <Route path="/about-me/" element={<AboutMe />}/>
       </Routes>
     </BrowserRouter>
