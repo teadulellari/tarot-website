@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import theLovers from "../assets/TheLovers1.png";
 import theEmpress from "../assets/TheLovers2.png";
@@ -8,6 +8,7 @@ import SuggestionCard from "./SuggestionCard"; // Import the SuggestionCard comp
 import { useNavigate } from "react-router-dom";
 import RevealOnScroll from "../HomePage/RevealOnScroll";
 import Footer from "./Footer";
+import { TextDBContext } from "./contexts/TextDBContext";
 interface ServiceProps {
   img: string;
   title: string;
@@ -29,6 +30,7 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
   const readingType = useParams<ReadingDetailsParams>()?.readingType;
   const navigate = useNavigate();
   const location = useLocation();
+  const textDB = useContext(TextDBContext); 
 
   useEffect(() => {
     scrollTo("top")
@@ -37,58 +39,38 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
   const readingData: Record<string, ServiceProps> = {
     "love-reading": {
       img: theLovers,
-      title: "Love Reading",
-      price: "60€",
-      description:
-        "Tea Tarot, with years of experience, will carefully analyze the current energies surrounding your love life, providing honest insights into potential opportunities, challenges, and the overall direction of your romantic path. We value your time and aim to provide you with your detailed love reading within 5-7 business days. This allows Tea Tarot to give your questions the attention they deserve for a thoughtful response. If you have questions or need further clarification after receiving your love reading, Tea Tarot is available for follow-up discussions to help you navigate your unique situation.",
-      reasonsToChoose: [
-        "Experience: Tea Tarot approaches each reading with years of experience, ensuring a deep and insightful analysis of your love life.",
-        "Confidentiality: Your privacy is paramount. Your readings are strictly confidential, and we take every precaution to protect your personal information.",
-        "Personalized Guidance: Your love reading is customized to address your specific concerns and questions, offering practical advice tailored to your circumstances.",
-      ],
+      title: textDB.readingdata["love-reading"].title,
+      price: textDB.readingdata["love-reading"].price,
+      description:textDB.readingdata["love-reading"].description,
+      reasonsToChoose: textDB.readingdata["love-reading"].reasonsToChoose
     },
     "general-reading": {
       img: theEmpress,
-      title: "General Reading",
-      price: "50€",
-      description:
-        "Tea Leaf Tarot, with years of experience, will carefully analyze the current energies surrounding your life, providing insights into various aspects of your life's journey. We value your time and aim to provide you with your detailed general reading within 5-7 business days. This ensures that you receive a thorough and meaningful reading. If you have questions or need further clarification after receiving your general reading, Tea Tarot is available for follow-up discussions to help you navigate your unique situation.",
-      reasonsToChoose: [
-        "Experience: Tea Tarot approaches each reading with years of experience, ensuring a deep and insightful analysis of your life's journey.",
-        "Confidentiality: Your privacy is paramount. Your readings are strictly confidential, and we take every precaution to protect your personal information.",
-        "Personalized Guidance: Your general reading is customized to address your specific concerns and questions, offering practical advice tailored to your circumstances.",
-      ],
+      title: textDB.readingdata["general-reading"].title,
+      price: textDB.readingdata["general-reading"].price,
+      description:textDB.readingdata["general-reading"].description,
+      reasonsToChoose: textDB.readingdata["general-reading"].reasonsToChoose
     },
     "decision-making-reading": {
       img: twoOfSwords,
-      title: "Decision Making Reading",
-      price: "60€",
-      description:
-        "Tea Tarot, with years of experience, will carefully analyze the current energies surrounding your decisions, providing honest insights to guide you through your decision-making process. We value your time and aim to provide you with your detailed decision-making reading within 5-7 business days. This allows you to receive timely insights into your decision-making process. If you have questions or need further clarification after receiving your decision-making reading, Tea Tarot is available for follow-up discussions to help you navigate your unique situation.",
-      reasonsToChoose: [
-        "Experience: Tea Tarot approaches each reading with years of experience, ensuring a deep and insightful analysis of your decision-making process.",
-        "Confidentiality: Your privacy is paramount. Your readings are strictly confidential, and we take every precaution to protect your personal information.",
-        "Personalized Guidance: Your decision-making reading is customized to address your specific concerns and questions, offering practical advice tailored to your circumstances.",
-      ],
+      title: textDB.readingdata["decision-making-reading"].title,
+      price: textDB.readingdata["decision-making-reading"].price,
+      description:textDB.readingdata["decision-making-reading"].description,
+      reasonsToChoose: textDB.readingdata["decision-making-reading"].reasonsToChoose
     },
     "spiritual-guidance-reading": {
       img: aceOfPnt,
-      title: "Spiritual Guidance Reading",
-      price: "80€",
-      description:
-        "Tea Tarot, with years of experience, will carefully analyze the current energies surrounding your spiritual path, providing guidance to help you on your spiritual journey. We value your time and aim to provide you with your detailed spiritual guidance reading within 5-7 business days. This allows you to receive timely insights into your spiritual path. If you have questions or need further clarification after receiving your spiritual guidance reading, Tea Tarot is available for follow-up discussions to help you navigate your unique situation.",
-      reasonsToChoose: [
-        "Experience: Tea Tarot approaches each reading with years of experience, ensuring a deep and insightful analysis of your spiritual path.",
-        "Confidentiality: Your privacy is paramount. Your readings are strictly confidential, and we take every precaution to protect your personal information.",
-        "Personalized Guidance: Your spiritual guidance reading is customized to address your specific concerns and questions, offering practical advice tailored to your circumstances.",
-      ],
+      title: textDB.readingdata["spiritual-guidance-reading"].title,
+      price: textDB.readingdata["spiritual-guidance-reading"].price,
+      description:textDB.readingdata["spiritual-guidance-reading"].description,
+      reasonsToChoose: textDB.readingdata["spiritual-guidance-reading"].reasonsToChoose
     },
   };
 
   const service = readingType ? readingData[readingType] : null;
 
   if (!service) {
-    return <div>Reading not found.</div>;
+    return <div>{textDB.readingdetails.error}</div>;
   }
 
   // Define related readings for each reading type
@@ -122,12 +104,12 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
                 {service.title}
               </h1>
               <p className="text-base md:text-lg font-semibold mt-2 text-customColor1">
-                Price: {service.price}
+                `{textDB.readingdetails.price}: {service.price}`
               </p>
 
               <div className="mt-6 md:mt-10">
                 <h2 className="text-center text-lg md:text-xl font-semibold text-[#e1be8a]">
-                  What to Expect
+                {textDB.readingdetails.expect}
                 </h2>
                 <p className="list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
                   {service.description}
@@ -136,7 +118,7 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
 
               <div className="mt-6 md:mt-10">
                 <h2 className="text-lg md:text-xl font-semibold text-[#e1be8a] text-center">
-                  Why Choose Tea Leaf Tarot?
+                {textDB.readingdetails.whyus}
                 </h2>
                 <ul className="list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
                   {service.reasonsToChoose.map((reason, index) => (
@@ -147,7 +129,7 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
 
               <div className="mt-6 md:mt-10 text-center">
                 <p className="text-base md:text-lg text-[#e1be8a]">
-                  If you're ready, book a reading in Calendly.
+                {textDB.readingdetails.actioncall}
                 </p>
                 <div className="mt-4">
                   <a
@@ -157,7 +139,7 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
                       navigate(`/reading/${readingType}/details`);
                     }}
                   >
-                    Book a Reading
+                    {textDB.readingdetails.actionbutton}
                   </a>
                 </div>
               </div>
@@ -170,7 +152,7 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
         <RevealOnScroll>
           <div className="container mx-auto">
             <h2 className="text-center text-xl md:text-2xl font-semibold text-[#e1be8a] mb-10">
-              Related Readings
+              {textDB.readingdetails.related}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
               {suggestions.map((readingType) => (

@@ -1,16 +1,20 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo-no-background.svg";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TextDBContext } from "./contexts/TextDBContext";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 interface NavigationBarProps {
   scrollTo: (identifier: string) => void
+  changeLang: (lang: "en" | "al" | "tr") => void
 }
 
-const NavigationBar: React.FC<NavigationBarProps> = ({scrollTo}) => {
+const NavigationBar: React.FC<NavigationBarProps> = ({scrollTo, changeLang}) => {
   const [navbar, setNavbar] = useState(false);
   const location = useLocation();
-  
+  const textDB = useContext(TextDBContext); 
+
   return (
     <nav id="top" className={location.pathname == "/" ? "w-full bg-transparent" : "w-full bg-customColor1"}>
       <div className="justify-between mx-auto mb-30 md:flex md:items-center md:px-8 border-b border-white border-opacity-20">
@@ -47,13 +51,18 @@ const NavigationBar: React.FC<NavigationBarProps> = ({scrollTo}) => {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-20 md:space-y-0">
               <li className="text-indigo-200 hover:text-white">
-                <Link to="/about-me/">About Me</Link>
+                <Link to="/about-me/">{textDB.navigationbar.about}</Link>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <Link to="/#services" onClick={() => scrollTo("services")}>Readings</Link>
+                <Link to="/#services" onClick={() => scrollTo("services")}>{textDB.navigationbar.readings}</Link>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <Link to="/#contact" onClick={() => scrollTo("contact")}>Contact</Link>
+                <Link to="/#contact" onClick={() => scrollTo("contact")}>{textDB.navigationbar.contact}</Link>
+              </li>
+              <li>
+                <span className="fi fi-al mr-2" onClick={() => changeLang("al")}></span>
+                <span className="fi fi-us mr-2" onClick={() => changeLang("en")}></span>
+                <span className="fi fi-tr mr-2" onClick={() => changeLang("tr")}></span>
               </li>
             </ul>
           </div>
@@ -75,7 +84,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({scrollTo}) => {
               href="https://calendly.com/teadulellari/tarot-reading"
               className="inline-block px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-white hover:bg-indigo-500 mt-4 lg:mt-0"
             >
-              Book a reading
+              {textDB.navigationbar.book}
             </a>
           </div>
         </div>

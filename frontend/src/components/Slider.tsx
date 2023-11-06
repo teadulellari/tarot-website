@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Review from "./Review";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { TextDBContext } from "./contexts/TextDBContext";
 
 interface ReviewData {
   reviewer: string;
@@ -17,6 +18,7 @@ const Slider: React.FC<SliderProps> = ({ reviews }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [reviewsPerPage, setReviewsPerPage] = useState(3); // Default number of reviews per page
   const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+  const textDB = useContext(TextDBContext); 
 
   useEffect(() => {
     const interval = setInterval(nextReviews, 7000);
@@ -71,10 +73,10 @@ const Slider: React.FC<SliderProps> = ({ reviews }) => {
     <div className="mt-[200px] mb-[150px] max-w-[1000px] mx-auto">
       <div className="bg-customColor1 rounded-lg p-4 shadow-md relative">
         <h1 className="text-customColor2 text-2xl font-semibold mb-[50px] mt-[50px] text-center">
-          Testimonials
+          {textDB.homepage["testimonal-title"]}
         </h1>
         <p className="text-white text-xl mb-[50px] mt-[50px] text-center">
-          Hear directly from our clients about their tarot reading experiences
+        {textDB.homepage["testimonal-body"]}
         </p>
         <div className="relative">
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2">

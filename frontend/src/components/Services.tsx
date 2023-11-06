@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import theLovers from "../assets/TheLovers1.png";
 import theEmpress from "../assets/TheLovers2.png";
 import twoOfSwords from "../assets/TheLovers3.png";
 import aceOfPnt from "../assets/TheLovers4.png";
 import { Link } from 'react-router-dom';
+import { TextDBContext } from "./contexts/TextDBContext";
 
 interface ServiceProps {
   img: string;
@@ -39,44 +40,46 @@ const Service: React.FC<ServiceProps> = ({ img, title, button, serviceLink }) =>
 };
 
 const Services = () => {
+  const textDB = useContext(TextDBContext); 
+
   return (
     <div className="flex justify-center items-center py-8 mx-auto">
       <div className="max-w-[1300px]">
         <div className="text-customColor2 text-center">
           <div className="flex justify-center items-center mb-12">
-            <h1 className="text-2xl font-bold mt-8">Our Readings!</h1>
+            <h1 className="text-2xl font-bold mt-8">{textDB.homepage["reading-title"]}</h1>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
             <div className="p-8">
               <Service
                 img={theLovers}
-                title="Love Reading"
-                button="Learn More"
+                title={textDB.homepage["reading-1"]}
+                button={textDB.homepage["reading-1-action"]}
                 serviceLink="/reading/love-reading/details"
               />
             </div>
             <div className="p-8">
               <Service
                 img={theEmpress}
-                title="General Reading"
-                button="Learn More"
+                title={textDB.homepage["reading-2"]}
+                button={textDB.homepage["reading-2-action"]}
                 serviceLink="reading/general-reading/details"
               />
             </div>
             <div className="p-8">
               <Service
                 img={twoOfSwords}
-                title="Decision Making Reading"
-                button="Learn More"
+                title={textDB.homepage["reading-3"]}
+                button={textDB.homepage["reading-3-action"]}
                 serviceLink="reading/decision-making-reading/details"
               />
             </div>
             <div className="p-8">
               <Service
                 img={aceOfPnt}
-                title="Spiritual Guidance Reading"
-                button="Learn More"
+                title={textDB.homepage["reading-4"]}
+                button={textDB.homepage["reading-4-action"]}
                 serviceLink="reading/spiritual-guidance-reading/details"
               />
             </div>

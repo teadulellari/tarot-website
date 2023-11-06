@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TextDBContext } from "./contexts/TextDBContext";
 import Question from "./Question";
 
 interface FaqData {
@@ -11,11 +12,13 @@ interface QuestionProps {
 }
 
 const Faq: React.FC<QuestionProps> = ({ questions }) => {
+  const textDB = useContext(TextDBContext); 
+
   return (
     <div className="container px-4 py-8 mx-auto mt-30 mb-40 max-w-[1000px] bg-customColor1">
       <div>
         <h1 className="text-customColor2 text-xl font-semibold mb-4 mt-4 text-center">
-          FREQUENTLY ASKED QUESTIONS
+          {textDB.homepage["faq-title"]}
         </h1>
       </div>
       <div className="mt-4 space-y-4 lg:mt-6">
