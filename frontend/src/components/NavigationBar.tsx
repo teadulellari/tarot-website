@@ -1,30 +1,25 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo-no-background.svg";
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 interface NavigationBarProps {
-  navbar: boolean;
-  setNavbar: React.Dispatch<React.SetStateAction<boolean>>;
+  scrollTo: (identifier: string) => void
 }
 
-const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  };
+const NavigationBar: React.FC<NavigationBarProps> = ({scrollTo}) => {
+  const [navbar, setNavbar] = useState(false);
+  const location = useLocation();
+  
   return (
-    <nav id="top" className="w-full bg-transparent">
+    <nav id="top" className={location.pathname == "/" ? "w-full bg-transparent" : "w-full bg-customColor1"}>
       <div className="justify-between mx-auto mb-30 md:flex md:items-center md:px-8 border-b border-white border-opacity-20">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <div className="flex items-center justify-center w-32 h-30 md:w-54 md:h-30 lg:w-64 lg:h-30">
-              <a href="#">
+              <Link to="/" onClick={() => scrollTo("#")}>
                 <img src={logo} alt="Logo" className="object-contain h-full w-full" />
-              </a>
+              </Link>
             </div>
             <div className="md:hidden">
               <button
@@ -52,13 +47,13 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ navbar, setNavbar }) => {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-20 md:space-y-0">
               <li className="text-indigo-200 hover:text-white">
-                <a href="/about-me/">About Me</a>
+                <Link to="/about-me/">About Me</Link>
               </li>
               <li className="text-indigo-200 hover:text-white">
-              <a href="#services" onClick={() => scrollToSection("services")}>Readings</a>
+                <Link to="/#services" onClick={() => scrollTo("services")}>Readings</Link>
               </li>
               <li className="text-indigo-200 hover:text-white">
-                <a href="#contact" onClick={() => scrollToSection("contact")}>Contact</a>
+                <Link to="/#contact" onClick={() => scrollTo("contact")}>Contact</Link>
               </li>
             </ul>
           </div>
