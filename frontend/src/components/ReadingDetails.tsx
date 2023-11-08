@@ -4,7 +4,8 @@ import theLovers from "../assets/TheLovers1.png";
 import theEmpress from "../assets/TheLovers2.png";
 import twoOfSwords from "../assets/TheLovers3.png";
 import aceOfPnt from "../assets/TheLovers4.png";
-import SuggestionCard from "./SuggestionCard"; // Import the SuggestionCard component
+import SuggestionCard from "./SuggestionCard"; 
+import theMoon from "../assets/TheMoon.png"
 import { useNavigate } from "react-router-dom";
 import RevealOnScroll from "../HomePage/RevealOnScroll";
 import Footer from "./Footer";
@@ -44,12 +45,12 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
       description:textDB.readingdata["love-reading"].description,
       reasonsToChoose: textDB.readingdata["love-reading"].reasonsToChoose
     },
-    "general-reading": {
+    "finances-reading": {
       img: theEmpress,
-      title: textDB.readingdata["general-reading"].title,
-      price: textDB.readingdata["general-reading"].price,
-      description:textDB.readingdata["general-reading"].description,
-      reasonsToChoose: textDB.readingdata["general-reading"].reasonsToChoose
+      title: textDB.readingdata["finances-reading"].title,
+      price: textDB.readingdata["finances-reading"].price,
+      description:textDB.readingdata["finances-reading"].description,
+      reasonsToChoose: textDB.readingdata["finances-reading"].reasonsToChoose
     },
     "decision-making-reading": {
       img: twoOfSwords,
@@ -65,6 +66,13 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
       description:textDB.readingdata["spiritual-guidance-reading"].description,
       reasonsToChoose: textDB.readingdata["spiritual-guidance-reading"].reasonsToChoose
     },
+    "short-reading": {
+      img: theMoon,
+      title: textDB.readingdata["short-reading"].title,
+      price: textDB.readingdata["short-reading"].price,
+      description:textDB.readingdata["short-reading"].description,
+      reasonsToChoose: textDB.readingdata["short-reading"].reasonsToChoose
+    }
   };
 
   const service = readingType ? readingData[readingType] : null;
@@ -75,10 +83,12 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
 
   // Define related readings for each reading type
   const relatedReadings: Record<string, string[]> = {
-    "love-reading": ["general-reading", "decision-making-reading", "spiritual-guidance-reading"],
-    "general-reading": ["love-reading", "decision-making-reading", "spiritual-guidance-reading"],
-    "decision-making-reading": ["love-reading", "general-reading", "spiritual-guidance-reading"],
-    "spiritual-guidance-reading": ["love-reading", "general-reading", "decision-making-reading"],
+    "love-reading": ["finances-reading", "decision-making-reading", "spiritual-guidance-reading", "short-reading"],
+    "finances-reading": ["love-reading", "decision-making-reading", "spiritual-guidance-reading", "short-reading"],
+    "decision-making-reading": ["love-reading", "finances-reading", "spiritual-guidance-reading", "short-reading"],
+    "spiritual-guidance-reading": ["love-reading", "finances-reading", "decision-making-reading", "short-reading"],
+    "short-reading": ["love-reading", "finances-reading", "decision-making-reading", "spiritual-guidance-reading"],
+
   };
 
   // Get related readings for the current reading type

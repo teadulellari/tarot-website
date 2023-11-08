@@ -18,9 +18,9 @@
                   "Personalized Guidance: Your love reading is customized to address your specific concerns and questions, offering practical advice tailored to your circumstances."
                 ]
               },
-              "general-reading": {
-                "title": "General Reading",
-                "price": "50€",
+              "finances-reading": {
+                "title": "Finances Reading",
+                "price": "60€",
                 "description":
                   "Tea Leaf Tarot, with years of experience, will carefully analyze the current energies surrounding your life, providing insights into various aspects of your life's journey. We value your time and aim to provide you with your detailed general reading within 5-7 business days. This ensures that you receive a thorough and meaningful reading. If you have questions or need further clarification after receiving your general reading, Tea Tarot is available for follow-up discussions to help you navigate your unique situation.",
                 "reasonsToChoose": [
@@ -49,6 +49,17 @@
                   "Experience: Tea Tarot approaches each reading with years of experience, ensuring a deep and insightful analysis of your spiritual path.",
                   "Confidentiality: Your privacy is paramount. Your readings are strictly confidential, and we take every precaution to protect your personal information.",
                   "Personalized Guidance: Your spiritual guidance reading is customized to address your specific concerns and questions, offering practical advice tailored to your circumstances."
+                ]
+              },
+              "short-reading": {
+                "title": "Short Reading",
+                "price": "30€",
+                "description":
+                  "Tea Tarot, with years of experience, will carefully analyze the current energies surrounding your situation, providing guidance to help you on your burning question. We value your time and aim to provide you with your detailed spiritual guidance reading within one day. This allows you to receive timely insights.",
+                "reasonsToChoose": [
+                  "Experience: Tea Tarot approaches each reading with years of experience, ensuring a deep and insightful analysis of your spiritual path.",
+                  "Confidentiality: Your privacy is paramount. Your readings are strictly confidential, and we take every precaution to protect your personal information.",
+                  "Personalized Guidance: Your reading is customized to address your specific concerns and questions, offering practical advice tailored to your circumstances."
                 ]
               }
         },
@@ -81,12 +92,14 @@
             "reading-title":"Our Readings!",
             "reading-1":"Love Reading",
             "reading-1-action":"Learn More",
-            "reading-2":"General Reading",
+            "reading-2":"Financial Reading",
             "reading-2-action":"Learn More",
             "reading-3":"Decision Making Reading",
             "reading-3-action":"Learn More",
             "reading-4":"Spiritual Guidance Reading",
             "reading-4-action":"Learn More",
+            "reading-5":"Short Reading",
+            "reading-5-action":"Learn More",
             "expertise-title":"Our Expertise",
             "expertise-1":"Satisfied clients",
             "expertise-2":"of clients booked a second reading",
@@ -192,6 +205,17 @@
                   "a": "A: Once your payment is confirmed, I strive to provide prompt and timely service. Depending on the current demand, you can typically expect to receive your tarot reading within a couple of days. I prioritize delivering quality readings while ensuring each client receives the attention and focus they deserve. Rest assured that I will make every effort to provide your reading as soon as possible."
                 },
                 {
+                  "q": "Question: How can I make the payment?",
+                  "a": "Answer: You can make the payment with PayPal, Wise or WesternUnion and Moneygram. Once the payment is sent and I receive it, I will start working on your case. PayPal is the fastest way. If you choose WesternUnion or MoneyGram you must keep in mind that I cannot receive payment on weekends or holidays, so you will have to wait."
+                },
+                {
+                  "q":"Question: Can I take the reading and then pay?",
+                  "a": "No I do not proceed that way. Due to many cases that receive service and decide to close communication I do not accept advance service unless I have received payment first. Reading takes a lot of time from my daily life and energy too."
+                },
+                {"q":"Do you do free readings?",
+                 "a":"My readings are paid but I often do different raffles and giveaways for free readings. Follow me on social media to not miss these opportunities."
+                },
+                {
                   "q": "Q: Why should I trust you?",
                   "a": "A: As a tarot reader, I value the trust and confidentiality of my clients. I have extensive knowledge and experience in tarot reading, and I approach each session with empathy, respect, and non-judgment. I strive to provide accurate and insightful readings that can guide and empower you. Additionally, I adhere to a professional code of ethics, ensuring your privacy and confidentiality throughout the process."
                 }
@@ -223,9 +247,9 @@
                     "Kişiselleştirilmiş Rehberlik: Aşk falınız, özel endişelerinizi ve sorularınızı ele alacak şekilde özelleştirilir ve koşullarınıza uygun pratik tavsiyeler sunar."
                 ]
             },
-            "general-reading": {
-                "title": "Genel Fal",
-                "price": "50€",
+            "finances-reading": {
+                "title": "Finans için Okumak",
+                "price": "60€",
                 "description":
                     "Yılların deneyimine sahip Tea Leaf Tarot, yaşamınızı çevreleyen mevcut enerjileri dikkatlice analiz ederek yaşam yolculuğunuzun çeşitli yönlerine içgörüler sunar. Zamanınızı değerli buluyor ve size detaylı genel falınızı 5-7 iş günü içinde sunmayı hedefliyoruz. Bu, size kapsamlı ve anlamlı bir okuma sağlar. Genel falınızı aldıktan sonra sorularınız veya daha fazla açıklamaya ihtiyacınız varsa, Tea Tarot, benzersiz durumunuzu yönlendirmenize yardımcı olmak için takip görüşmeleri için mevcuttur.",
                 "reasonsToChoose": [
@@ -255,6 +279,17 @@
                     "Gizlilik: Gizliliğiniz çok önemlidir. Okumalarınız kesinlikle gizli tutulur ve kişisel bilgilerinizi korumak için her türlü önlemi alırız.",
                     "Kişiselleştirilmiş Rehberlik: Manevi rehberlik falınız, özel endişelerinizi ve sorularını ele alacak şekilde özelleştirilir ve koşullarınıza uygun pratik tavsiyeler sunar."
                 ]
+            },
+            "short-reading": {
+              "title": "Kısa Okuması",
+              "price": "30€",
+              "description":
+                "Tea Tarot, yılların tecrübesiyle, aşk hayatınızı çevreleyen mevcut enerjileri dikkatlice analiz edecek ve aşk hayatınızla ilgili potansiyel fırsatlar, zorluklar ve romantik yolunuzun genel yönü hakkında dürüst içgörüler sunacak. Zamanınıza değer veriyoruz ve size detaylı aşk okumanızı 5-7 iş günü içinde sunmayı amaçlıyoruz. Bu, sorularınıza düşünceli bir yanıt için Tea Tarot'a layık olduğu ilgiyi vermesine olanak tanır. Aşk okumanızı aldıktan sonra sorularınız varsa veya daha fazla açıklamaya ihtiyacınız varsa, Tea Tarot benzersiz durumunuzda yol almanıza yardımcı olmak için takip görüşmeleri için kullanılabilir.",
+              "reasonsToChoose": [
+                "Deneyim: Tea Tarot, her okumaya yılların deneyimiyle yaklaşarak aşk hayatınızın derin ve içgörülü bir analizini sağlar.",
+               "Gizlilik: Gizliliğiniz en önemlidir. Okumalarınız kesinlikle gizli tutulur ve kişisel bilgilerinizi korumak için her türlü önlem alınır.",
+              "Kişiselleştirilmiş Rehberlik: Aşk okumanız, özel endişelerinizi ve sorularınızı ele alacak şekilde özelleştirilir ve koşullarınıza uygun pratik tavsiyeler sunar."
+              ]
             }
         },        
         "aboutme":{
@@ -286,12 +321,14 @@
             "reading-title":"Okumalarımız!",
             "reading-1":"Aşk Okuma",
             "reading-1-action":"Daha Fazla Bilgi Edinin",
-            "reading-2":"Genel Okuma",
+            "reading-2":"Finans için Okumak",
             "reading-2-action":"Daha Fazla Bilgi Edinin",
             "reading-3":"Karar Verme Okuma",
             "reading-3-action":"Daha Fazla Bilgi Edinin",
             "reading-4":"Ruhani Rehberlik Okuma",
             "reading-4-action":"Daha Fazla Bilgi Edinin",
+            "reading-5":"Ruhani Rehberlik Okuma",
+            "reading-5-action":"Daha Fazla Bilgi Edinin",
             "expertise-title":"Uzmanlığımız",
             "expertise-1":"Memnun Müşteriler",
             "expertise-2":"müşterilerin ikinci bir okuma yaptırdı",
@@ -397,6 +434,17 @@
                     "a": "C: Ödemeniz onaylandığında, hızlı ve zamanında hizmet sunma konusunda çaba sarf ediyorum. Mevcut talebe bağlı olarak, tarot okumanızı genellikle birkaç gün içinde almayı bekleyebilirsiniz. Her müşterinin hak ettiği dikkati ve odaklanmayı aldığından emin olurken kaliteli okumalar sunmayı öncelikli hale getiririm. Okumanızı en kısa sürede sunmak için elimden gelen her şeyi yapacağımıza emin olabilirsiniz."
                 },
                 {
+                  "q": "S: Ödemeyi nasıl yapabilirim?",
+                  "a": "C: Ödemeyi PayPal, Wise veya WesternUnion ve Moneygram ile yapabilirsiniz. Ödeme gönderildikten ve ben aldıktan sonra, durumunuz üzerinde çalışmaya başlayacağım. PayPal en hızlı yoldur. WesternUnion'u seçerseniz veya MoneyGram, hafta sonları veya tatil günlerinde ödeme alamadığımı, dolayısıyla beklemeniz gerektiğini aklınızda bulundurmalısınız."
+                },
+                {
+                  "q":"S: Okumayı alıp sonra ödeme yapabilir miyim?",
+                  "a":"C: Hayır o şekilde ilerlemem. Hizmet alan ve iletişimin kesilmesine karar veren birçok durum nedeniyle, önce ödeme almadığım sürece avans hizmeti kabul etmiyorum. Okumak günlük hayatımdan çok zamanımı ve enerjimi alıyor fazla."
+                },
+                {"q":"S: Ücretsiz okuma yapıyor musunuz?",
+                 "a":"C: Okumalarım ücretli ama ücretsiz okumalar için sıklıkla farklı çekilişler ve hediyeler yapıyorum. Bu fırsatları kaçırmamak için beni sosyal medyada takip edin."
+                },
+                {
                     "q": "S: Neden size güvenmeliyim?",
                     "a": "C: Bir tarot okuyucusu olarak müşterilerimin güvenini ve gizliliğini değerli buluyorum. Tarot okuma konusundaki kapsamlı bilgi ve deneyime sahibim ve her seansı empati, saygı ve yargısızlıkla ele alıyorum. Sizi yönlendirebilecek ve güçlendirebilecek doğru ve içgörülü okumalar sunmaya çalışıyorum. Ayrıca, süreç boyunca gizliliğinizi ve gizliliğinizi sağlamak için profesyonel bir etik kurallara uyarım."
                 }
@@ -421,21 +469,21 @@
                 "title": "Leximi për Dashurinë",
                 "price": "60€",
                 "description":
-                  "Tea Tarot, me vite të përvojës, do të analizojë me kujdes energjitë aktuale që rrethojnë jetën tënde të dashurisë, duke ofruar pamje të sinqerta në mundësitë potenciale, sfidat dhe drejtimin e përgjithshëm të rrugës sate romantike. Ne vlerësojmë kohën tënde dhe synojmë të të sigurojmë leximin tënde të dashurisë të detajuar brenda 5-7 ditëve të punës. Kjo i mundëson Tea Tarot të japë pyetjeve tua vëmendjen që ata meritojnë për një përgjigje të hovshme. Nëse ke pyetje ose ke nevojë për sqarime të mëtejshme pasi të kesh marrë leximin tënde të dashurisë, Tea Tarot është në dispozicion për diskutime të vazhdueshme për të të ndihmuar në navigimin e situatës sate të veçantë.",
+                  "Tea Tarot, me shume vite eksperience, do të analizojë me kujdes energjitë aktuale që rrethojnë jetën tënde të dashurisë, duke ofruar pamje të sinqerta në mundësitë potenciale, sfidat dhe drejtimin e përgjithshëm të rrugës tende romantike. Ne vlerësojmë kohën tënde dhe synojmë të të sigurojmë leximin tënde të dashurisë të detajuar brenda 1-2 ditesh. Kjo i mundëson Tea Tarot të japë pyetjeve tua vëmendjen që ato meritojnë për një përgjigje të sakte. Nëse ke pyetje ose ke nevojë për sqarime të mëtejshme pasi të kesh marrë leximin tënde të dashurisë, Tea Tarot është në dispozicion për diskutime të vazhdueshme për të të ndihmuar në navigimin e situatës tende të veçantë.",
                 "reasonsToChoose": [
-                  "Përvojë: Tea Tarot i afrohet çdo leximi me vite të përvojës, duke siguruar një analizë të thellë dhe të zgjuar të jetës sate të dashurisë.",
-                  "Konfidencialiteti: Privatësia jote është e parësishme. Leximet tua janë striktisht konfidenciale, dhe ne marrim çdo masë për të mbrojtur informacionin tënd personal.",
-                  "Udhëzim i Përshtatur: Leximi yt për dashurinë është i përshtatur për të adresuar shqetësimet dhe pyetjet e tua specifike, duke ofruar këshilla praktike të përshtatura për rrethanat tua."
+                  "Përvojë: Tea Tarot i afrohet çdo leximi me shume vite eksperience, duke siguruar një analizë të thellë të jetës tende romantike.",
+                  "Konfidencialiteti: Privatësia jote është e parësishme. Leximet tua janë në mënyrë strikte konfidenciale, dhe ne marrim çdo masë për të mbrojtur informacionin tënd personal.",
+                  "Udhëzim i Përshtatur: Leximi yt për dashurinë është i përshtatur për të adresuar shqetësimet dhe pyetjet e tua specifike për dashurinë, duke ofruar këshilla praktike të përshtatura për rrethanat tua."
                 ]
             },
-            "general-reading": {
-                "title": "Leximi i Përgjithshëm",
-                "price": "50€",
+            "finances-reading": {
+                "title": "Leximi për Financat",
+                "price": "60€",
                 "description":
-                  "Tea Leaf Tarot, me vite të përvojës, do të analizojë me kujdes energjitë aktuale që rrethojnë jetën tënde, duke ofruar pamje në shumë aspekte të udhëtimit tënd të jetës. Ne vlerësojmë kohën tënde dhe synojmë të të sigurojmë leximin tënde të përgjithshëm të detajuar brenda 5-7 ditëve të punës. Kjo siguron që merr një lexim të plotë dhe me kuptim. Nëse ke pyetje ose ke nevojë për sqarime të mëtejshme pasi të kesh marrë leximin tënde të përgjithshëm, Tea Tarot është në dispozicion për diskutime të vazhdueshme për të të ndihmuar në navigimin e situatës sate të veçantë.",
+                  "Tea Leaf Tarot, me shume vite eksperience, do të analizojë me kujdes energjitë aktuale që rrethojnë jetën tënde financiare, duke ofruar pamje në shumë aspekte të udhëtimit tënd të jetës. Ne vlerësojmë kohën tënde dhe synojmë të të sigurojmë leximin tënde të përgjithshëm të detajuar brenda 1-2 ditëve të punës. Kjo te siguron që mete marresh një lexim të plotë dhe me kuptim. Nëse ke pyetje ose ke nevojë për sqarime të mëtejshme pasi të kesh marrë leximin tend të përgjithshëm, Tea Tarot është në dispozicion për diskutime të vazhdueshme për të të ndihmuar në navigimin e situatës tende të veçantë.",
                 "reasonsToChoose": [
-                  "Përvojë: Tea Tarot i afrohet çdo leximi me vite të përvojës, duke siguruar një analizë të thellë dhe të zgjuar të udhëtimit tënd të jetës.",
-                  "Konfidencialiteti: Privatësia jote është e parësishme. Leximet tua janë striktisht konfidenciale, dhe ne marrim çdo masë për të mbrojtur informacionin tënd personal.",
+                  "Përvojë: Tea Tarot i afrohet çdo leximi me shume vite eksperience, duke siguruar një analizë të thellë të udhëtimit tënd të jetës.",
+                  "Konfidencialiteti: Privatësia jote është e parësishme. Leximet tua janë në mënyrë strikte konfidenciale, dhe ne marrim çdo masë për të mbrojtur informacionin tënd personal.",
                   "Udhëzim i Përshtatur: Leximi yt i përgjithshëm është i përshtatur për të adresuar shqetësimet dhe pyetjet e tua specifike, duke ofruar këshilla praktike të përshtatura për rrethanat tua."
                 ]
             },
@@ -443,10 +491,10 @@
                 "title": "Leximi për Marrjen e Vendimeve",
                 "price": "60€",
                 "description":
-                  "Tea Tarot, me vite të përvojës, do të analizojë me kujdes energjitë aktuale që rrethojnë vendimet tua, duke ofruar pamje të sinqerta për të të udhëzuar në procesin e marrjes sate të vendimeve. Ne vlerësojmë kohën tënde dhe synojmë të të sigurojmë leximin tënde të detajuar për marrjen e vendimeve brenda 5-7 ditëve të punës. Kjo ju lejon të merrni pamje në kohë për procesin tuaj të marrjes sate të vendimeve. Nëse ke pyetje ose ke nevojë për sqarime të mëtejshme pasi të kesh marrë leximin për marrjen e vendimeve, Tea Tarot është në dispozicion për diskutime të vazhdueshme për të të ndihmuar në navigimin e situatës sate të veçantë.",
+                  "Tea Tarot do të analizojë me kujdes energjitë aktuale që rrethojnë vendimet tua, duke ofruar pamje të sinqerta për të të udhëzuar në procesin e marrjes tende të vendimeve. Ne vlerësojmë kohën tënde dhe synojmë të të sigurojmë leximin tënde të detajuar për marrjen e vendimeve brenda 1-2 ditëve të punës. Kjo ju lejon të merrni pikpamje në kohë për procesin tuaj të marrjes tende të vendimeve. Nëse ke pyetje ose ke nevojë për sqarime të mëtejshme pasi të kesh marrë leximin për marrjen e vendimeve, Tea Tarot është në dispozicion për diskutime të vazhdueshme për të të ndihmuar në navigimin e situatës tende të veçantë.",
                 "reasonsToChoose": [
-                  "Përvojë: Tea Tarot i afrohet çdo leximi me vite të përvojës, duke siguruar një analizë të thellë dhe të zgjuar të procesit të marrjes sate të vendimeve.",
-                  "Konfidencialiteti: Privatësia jote është e parësishme. Leximet tua janë striktisht konfidenciale, dhe ne marrim çdo masë për të mbrojtur informacionin tënd personal.",
+                  "Përvojë: Tea Tarot i afrohet çdo leximi me shume vite eksperience, duke siguruar një analizë të thellë të procesit të marrjes tende të vendimeve.",
+                  "Konfidencialiteti: Privatësia jote është e parësishme. Leximet tua janë në mënyrë strikte konfidenciale, dhe ne marrim çdo masë për të mbrojtur informacionin tënd personal.",
                   "Udhëzim i Përshtatur: Leximi yt për marrjen e vendimeve është i përshtatur për të adresuar shqetësimet dhe pyetjet e tua specifike, duke ofruar këshilla praktike të përshtatura për rrethanat tua."
                 ]
             },
@@ -454,63 +502,76 @@
                 "title": "Leximi për Udhëzim Shpirtëror",
                 "price": "80€",
                 "description":
-                  "Tea Tarot, me vite të përvojës, do të analizojë me kujdes energjitë aktuale që rrethojnë rrugën tënde shpirtërore, duke ofruar udhëzim për të të ndihmuar në udhëtimin tënd shpirtëror. Ne vlerësojmë kohën tënde dhe synojmë të të sigurojmë leximin tënde të udhëzimit shpirtëror të detajuar brenda 5-7 ditëve të punës. Kjo ju lejon të merrni pamje në kohë në rrugën tuaj shpirtërore. Nëse ke pyetje ose ke nevojë për sqarime të mëtejshme pasi të kesh marrë leximin për udhëzim shpirtëror, Tea Tarot është në dispozicion për diskutime të vazhdueshme për të të ndihmuar në navigimin e situatës sate të veçantë.",
+                  "Tea Tarot do të analizojë me kujdes energjitë aktuale që rrethojnë rrugën tënde shpirtërore, duke ofruar udhëzim për të të ndihmuar në udhëtimin tënd shpirtëror. Ne vlerësojmë kohën tënde dhe synojmë të të sigurojmë leximin tënde të udhëzimit shpirtëror të detajuar brenda 5-7 ditëve të punës. Kjo ju lejon të merrni pamje në kohë në rrugën tuaj shpirtërore. Nëse ke pyetje ose ke nevojë për sqarime të mëtejshme pasi të kesh marrë leximin për udhëzim shpirtëror, Tea Tarot është në dispozicion për diskutime të vazhdueshme për të të ndihmuar në navigimin e situatës tende të veçantë.",
                 "reasonsToChoose": [
-                  "Përvojë: Tea Tarot i afrohet çdo leximi me vite të përvojës, duke siguruar një analizë të thellë dhe të zgjuar të rrugës tënde shpirtërore.",
-                  "Konfidencialiteti: Privatësia jote është e parësishme. Leximet tua janë striktisht konfidenciale, dhe ne marrim çdo masë për të mbrojtur informacionin tënd personal.",
+                  "Përvojë: Tea Tarot i afrohet çdo leximi me shume vite eksperience, duke siguruar një analizë të thellë të rrugës tënde shpirtërore.",
+                  "Konfidencialiteti: Privatësia jote është e parësishme. Leximet tua janë në mënyrë strikte konfidenciale, dhe ne marrim çdo masë për të mbrojtur informacionin tënd personal.",
                   "Udhëzim i Përshtatur: Leximi yt për udhëzim shpirtëror është i përshtatur për të adresuar shqetësimet dhe pyetjet e tua specifike, duke ofruar këshilla praktike të përshtatura për rrethanat tua."
                 ]
+            },
+            "short-reading": {
+              "title": "Lexim i Shkurter",
+              "price": "30€",
+              "description":
+                "Tea Tarot do të analizojë me kujdes energjitë aktuale që rrethojnë jetën tënde, duke ofruar përgjigjen që dëshironi të dini. Ne vlerësojmë kohën tënde dhe synojmë të të sigurojmë leximin tënd të shkurtër brenda ditës.",
+              "reasonsToChoose": [
+                "Përvojë: Tea Tarot i afrohet çdo leximi me shume vite eksperience, duke siguruar një analizë të thellë të rrugës tënde shpirtërore.",
+                "Konfidencialiteti: Privatësia jote është e parësishme. Leximet tua janë në mënyrë strikte konfidenciale, dhe ne marrim çdo masë për të mbrojtur informacionin tënd personal.",
+                "Udhëzim i Përshtatur: Leximi yt për udhëzim shpirtëror është i përshtatur për të adresuar shqetësimet dhe pyetjet e tua specifike, duke ofruar këshilla praktike të përshtatura për rrethanat tua."
+              ]
             }
         },
         "aboutme":{
             "title":"Rreth Meje",
             "body-1-1":"Mirë se vini në botën time të tarotit!",
-            "body-1-2":"Më pëlqen të quhem Tea Leaf, dhe ju ftoj të më bashkoheni në një udhëtim që kalon nëpër breza dhe është përmbytur në njohuritë e lashta.",
-            "body-1-3":"Lidhja ime me leximet e tarotit filloi kohë para se unë të mund të përfytyroja fjalën \"tarot\". Si fëmijë, isha i magjepsur nga aura misterioze dhe magjike që rrethonte tubimet e familjes sime. Ishte gjatë këtyre tubimeve që doja të vëzhdoja gjyshen time, një medium i respektuar dhe i dhuruar, të hapej në thellësitë e letraleshëmve për të zbuluar sekrete të të shkuarës, pamje në të tashmen dhe shikime në të ardhmen.",
-            "body-2":"Seanca e tarotit e gjyshes time ishin si dritare në shpirt. Unë doja të ulur në këmbët e saj, me sy të hapur dhe me kuriozitet, ndërsa ajo i ngiste kartat me një elegancë që vjen vetëm nga vite të praktikës. Duarët e saj, të shthurura nga koha, mbanin çelësat për të hapur misteret e universit. Ajo më mësoi se taroti nuk është vetëm për letraleshëmt, por një lidhje e shenjtë me të divine, një mënyrë për të kuptuar vallëzimin kompleks midis fatit dhe vullnetit të lirë. Me kalimin e kohës, kurioziteti im për leximet e tarotit thellohej. Unë studioja me zjarr simbolizmin, arketipet dhe kuptime të fshehura esoterike brenda secilës letraleshëm. Kërkoja udhëzim nga gjyshja ime, e cila ushqeu me dashuri talentin tim në zhvillim dhe më vendosi bindjen se intuicioni dhe empatia janë çelësat për të hapur fuqinë e vërtetë të tarotit.",
-            "body-3":"Vitet kaluan, dhe udhëtimi im më çoi në eksplorimin e shpirtërisë, meditimit dhe ndërlidhjen e gjithçkaje. Lidhja gjeneracionale e familjes sime me leximet e tarotit u bë një pjesë e thellë e identitetit tim, dhe kuptova se nuk po vazhdoja vetëm një traditë; isha duke filluar një zgjim shpirtëror. Sot, jam i nderuar të ndaj dhuratat e mija me ju. Misioni im është të ju ofroj lexime të vërteta dhe të thella të tarotit që ju fuqizojnë për të bërë ndryshime pozitive në jetën tuaj. Secili lexim është një përvojë e personalizuar, me kujdes të krijuar për të adresuar pyetjet dhe shqetësimet tuaja unike. Ju ftoj të eksploroni botën e tarotit me mua, për të zbuluar misteret e udhëtimit tuaj dhe për të përshkuar magjinë që taroti mund të sjellë në jetën tuaj.",
-            "action-1":"Dhe kujtoni, nuk do të jem thjesht një i panjohur që interpreton letraleshëmt për ju. Jam e hapur të jem miq dhe shoqërues shpirtëror në këtë udhëtim të mrekullueshëm të zbulimit të vetvetes.",
-            "action-2":"Nëse ndonjëherë ndjeni nevojën për të lidhur lidhje, diskutuar ose thjesht ndarë mendimet tuaja, dini se jam këtu për ju."
+            "body-1-2":"Unë preferoj të quhem Tea Leaf dhe ju ftoj të bashkoheni me mua në një udhëtim që përfshin breza dhe është i zhytur në mençurinë e lashtë.",
+            "body-1-3":"Lidhja ime me leximet e tarotit filloi shumë përpara se të mund të shqiptoja fjalën \"tarot.\"  Si fëmijë, isha magjepsur nga atmosfera mistike dhe magjike që rrethonte mbledhjet e familjes sime. Pikërisht gjatë këtyre mbledhjeve do të dëshmoja se gjyshja ime, një medium i nderuar dhe i talentuar, gërmonte në thellësi të letrave për të shpalosur sekretet e së kaluarës, njohuri për të tashmen dhe për të parë të ardhmen.",
+            "body-2":"Seancat e tarotit të gjyshes sime ishin si dritare në shpirt. Unë ulesha në këmbët e saj, me sy të hapur dhe kureshtar, ndërsa ajo përziente letrat me një hijeshi që mund të vijë vetëm nga vite ekseperiencë. Duart e saj, të lodhura nga koha, mbanin çelësat për të shpalosur misteret e universit. Ajo më mësoi se tarot nuk kishte të bënte vetëm me letrat; ishte një lidhje e shenjtë me hyjnoren, një mënyrë për të kuptuar vallëzimin e ndërlikuar mes fatit dhe vullnetit të lirë. Ndërsa rritesha, magjepsja ime me leximet e tarotit u thellua. Kam studiuar me pasion simbolikën, arketipet dhe kuptimet ezoterike të fshehura brenda çdo letre. Kërkova udhëzime nga gjyshja ime, e cila ushqeu me dashuri talentin tim të ri dhe më rrënjosi besimin se intuita dhe ndjeshmëria ishin çelësat për të shpalosur fuqinë e vërtetë të tarotit.",
+            "body-3":"Vitet kaluan dhe udhëtimi im më çoi të eksploroja spiritualitetin, meditimin dhe ndërlidhjen e të gjitha gjërave. Lidhja e familjes sime me leximet tarot u bë një pjesë e thellë e identitetit tim dhe kuptova se nuk po vazhdoja vetëm një traditë; Po hyja në një zgjim shpirtëror. Sot kam nderin të ndaj dhuratat e mia me ju. Misioni im është t'ju ofroj lexime të vërteta dhe të thella tarot që ju fuqizojnë të bëni ndryshime pozitive në jetën tuaj. Çdo lexim është një përvojë e personalizuar, e krijuar me kujdes për të adresuar pyetjet dhe shqetësimet tuaja unike. Ju ftoj të eksploroni botën e tarotit me mua, të zbuloni misteret e udhëtimit tuaj dhe të përqafoni magjinë që tarot mund të sjellë në jetën tuaj.",
+            "action-1":"Dhe kujtoni, nuk do të jem thjesht një e panjohur që interpreton letrat për ju. Jam e hapur të jem miq ne këtë udhëtim të mrekullueshëm të zbulimit të vetvetes.",
+            "action-2":"Nëse ndonjëherë ndjeni nevojën për te folur, diskutuar ose thjesht të ndani mendimet tuaja, dijeni se unë jam këtu për ju. Do bëj të pamundurën t'ju kthen përgjigje sa me shpejt duke marre ne kosiderate dhe ngarkesen e punes qe kam."
         },
         "readingdetails":{
-            "expect":"Çfarë të pritet",
-            "whyus":"Pse të Zgjidhni Tarotin e Gjetheve të Çajit?",
+            "expect":"Çfarë të prisni nga kjo eksperience",
+            "whyus":"Pse duhet te zgjidhni Tea Leaf Tarot?",
             "actioncall":"Nëse jeni gati, rezervoni një lexim në Calendly.",
             "actionbutton":"Rezervoni një Lexim",
             "error":"Leximi nuk u gjet.",
-            "related":"Lexime të Lidhura",
+            "related":"Lexime të Tjera",
             "price":"Çmimi"
         },
         "homepage":{
             "slogan-title":"Ju meritoni një përgjigje!",
-            "slogan-body-1":"Pavarësisht nëse keni pyetje të flakura për dashurinë, karrierën, spiritualitetin ose zhvillimin personal, leximet tona të Tarotit ofrojnë përgjigjet që kërkoni.",
+            "slogan-body-1":"Pavarësisht nëse keni pyetje të nxehta për dashurinë, karrierën, spiritualitetin ose zhvillimin personal, leximet tona të Tarotit ofrojnë përgjigjet që kërkoni.",
             "slogan-body-2":"Çdo lexim është një përvojë unike, e përshtatur për nevojat dhe qëllimet tuaja specifike.",
-            "slogan-body-3":"Lejoni Tarotin t'ju udhëhoqë, duke ofruar qartësi, fuqizim dhe një ndjenjë të rinovuar të qëllimit.",
-            "slogan-body-4":"Destinacioni juaj është brenda zbritjes.",
+            "slogan-body-3":"Lejoni Tarotin t'ju udhëheqë, duke ofruar qartësi, fuqi për të përballuar sfidat dhe një ndjenjë të rinovuar të qëllimit.",
+            "slogan-body-4":"Fati juaj është vetëm një klikim larg.",
             "slogan-action":"Mësoni më tepër",
             "reading-title":"Leximet tona!",
             "reading-1":"Leximi i Dashurisë",
             "reading-1-action":"Mësoni Më Shumë",
-            "reading-2":"Leximi i Përgjithshëm",
+            "reading-2":"Leximi i Financave",
             "reading-2-action":"Mësoni Më Shumë",
-            "reading-3":"Leximi i Marrëveshjeve",
+            "reading-3":"Leximi i Vendimmarrjeve",
             "reading-3-action":"Mësoni Më Shumë",
             "reading-4":"Leximi i Udhëzimit Shpirtëror",
             "reading-4-action":"Mësoni Më Shumë",
+            "reading-5":"Lexim i Shkurter",
+            "reading-5-action":"Mësoni Më Shumë",
             "expertise-title":"Ekspertiza jonë",
             "expertise-1":"Klientë të kënaqur",
             "expertise-2":"e klientëve rezervuan një lexim të dytë",
-            "expertise-3":"Vite të ofrimit të udhëzimit",
+            "expertise-3":"Vite të ofrimit të sherbimit",
             "testimonal-title":"Dëshmi",
             "testimonal-body":"Dëgjoni drejtpërdrejtë nga klientët tanë për përvojën e tyre me leximet e Tarotit",
-            "faq-title":"PYETJE TË SHUMTA TË NJOFTUARA"
+            "faq-title":"PYETJE TË SHPESHTA"
         },
         "reviews": [
             {
                 "reviewer": "John Smith",
                 "image": "https://i.imgur.com/TLVoDUd.jpg",
                 "rating": 5,
-                "content": "Kam pasur një përvojë të mrekullueshme me këtë lexues të Tarotit. Parashikimet ishin të sakta dhe të dobishme. Rekomandohet shumë!"
+                "content": "Kam pasur një përvojë të mrekullueshme me këtë lexues të Tarotit. Parashikimet ishin të sakta dhe të dobishme. E rekomandoj shumë!"
             },
             {
                 "reviewer": "Tom Johnson",
@@ -534,13 +595,13 @@
                 "reviewer": "Liisa Kuusisto",
                 "image": "https://i.imgur.com/WPkWVDB.jpg",
                 "rating": 4,
-                "content": "Lexuesi i Tarotit ofroi një lexim të menduar. Megjithatë, disa aspekte ishin të sakta, por doja detaje më specifike. Në përgjithësi, ishte një përvojë e mirë."
+                "content": "Lexuesi i Tarotit ofroi një lexim të thellë. Megjithatë, disa aspekte ishin të sakta, por doja detaje më specifike. Në përgjithësi, ishte një përvojë shume e mirë."
             },
             {
                 "reviewer": "Sophie Leblanc",
                 "image": "https://i.imgur.com/lUyii53.jpg",
                 "rating": 5,
-                "content": "Ky lexues i Tarotit është vërtet i dhuruar! Leximi ishte informativ dhe mora udhëzime të vlefshme për situatën time aktuale. Rekomandohet shumë!"
+                "content": "Ky lexues i Tarotit është vërtet me dhunti! Leximi ishte informativ dhe mora udhëzime të vlefshme për situatën time aktuale. E rekomandoj shumë!"
             },
             {
                 "reviewer": "Alejandro Fernandez",
@@ -558,7 +619,7 @@
                 "reviewer": "Ryan Johnson",
                 "image": "https://i.imgur.com/q62qYaF.jpg",
                 "rating": 5,
-                "content": "Rekomandoj këtë lexues të Tarotit me ngulm. Seanca ishte frymëzuese, dhe fitova perspektivë të vlefshme për jetën time. Faleminderit për udhëzimin!"
+                "content": "Rekomandoj këtë lexues të Tarotit me këmbëngulje. Seanca ishte frymëzuese, dhe fitova perspektivë të vlefshme për jetën time. Faleminderit për udhëzimin!"
             },
             {
                 "reviewer": "Elena Petrova",
@@ -582,33 +643,44 @@
         "faq": {
             "questions": [
                 {
-                    "q": "Pyetje: Çfarë bën unikë leximet tuaja të Tarotit?",
-                    "a": "Përgjigje: Leximet e mia të Tarotit janë unikë sepse kombinoj aftësitë intuitive me njohuritë e thella mbi kartat e Tarotit. Përpjekem të ofroj lexime të personalizuara dhe të frytra që rezonojnë me situatën specifike të secilit individ, duke i ndihmuar të gjejnë qartësi dhe udhëzim."
+                    "q": "Pyetje: Çfarë i bën unike leximet tuaja të Tarotit?",
+                    "a": "Përgjigje: Leximet e mia të Tarotit janë unikë sepse kombinoj aftësitë intuitive me njohuritë e thella mbi letrat e Tarotit. Përpiqem të ofroj lexime të personalizuara dhe të dobishme që kanë lidhje me situatën specifike të secilit individ, duke i ndihmuar të gjejnë qartësi dhe udhëzimin qe kanë nevojë."
                 },
                 {
-                    "q": "Pyetje: Si mund të më përfitojnë leximet tuaja të Tarotit?",
-                    "a": "Përgjigje: Leximet e mia të Tarotit mund t'ju përfitojnë duke ofruar pamje dhe perspektiva të vlefshme mbi aspektet e ndryshme të jetës suaj. Pavarësisht nëse kërkoni udhëzim në lidhje me marrëdhëniet, zgjedhjet profesionale ose rritjen personale, leximet e mia mund t'ju sigurojnë qartësi dhe fuqi për të marrë vendime informuar."
+                    "q": "Pyetje: Cfarë mund të përfitoj nga leximet tuaja të Tarotit?",
+                    "a": "Përgjigje: Leximet e mia të Tarotit ofrojnë pamje dhe perspektiva të vlefshme mbi aspektet e ndryshme të jetës suaj. Pavarësisht nëse kërkoni udhëzim në lidhje me marrëdhëniet, zgjedhjet profesionale ose rritjen personale, leximet e mia mund t'ju sigurojnë qartësi dhe mundësinë për të marrë vendime të informuara."
                 },
                 {
-                    "q": "Pyetje: Cili është qasja juaj në leximet e Tarotit?",
-                    "a": "Përgjigje: Qasja ime në leximet e Tarotit është e përkujdesur, pa gjykim dhe e fuqishme. Unë krijoj një hapësirë të sigurt dhe mbështetëse ku mund të shprehni lirshëm shqetësimet tuaja dhe të bëni pyetjet tuaja. Së bashku, eksplorojmë kartat dhe simbolizmin e tyre, duke çliruar mesazhet dhe udhëzimin që mbajnë për ju."
+                    "q": "Pyetje: Cila është qasja juaj në leximet e Tarotit?",
+                    "a": "Përgjigje: Qasja ime në leximet e Tarotit është e përkujdesur, pa gjykim dhe pozitive. Unë krijoj një hapësirë të sigurt dhe të ngrohtë ku mund të shprehni lirshëm shqetësimet tuaja dhe të bëni pyetjet tuaja. Së bashku, eksplorojmë letrat dhe simbolizmin e tyre, duke përftuar mesazhet dhe udhëzimin që kanë për ju."
                 },
                 {
-                    "q": "Pyetje: Si mund të planifikoj një lexim të Tarotit me ju?",
-                    "a": "Përgjigje: Planifikimi i një leximi të Tarotit me mua është i lehtë! Mund të vizitoni faqen time të internetit dhe të navigoni në faqen 'Rezervo një Lexim', ku do të gjeni kohëzgjatjen e disponueshme. Thjesht zgjidhni një datë dhe orë që ju përshtaten, dhe ndiqni hapat për të siguruar një takim. Ofrtoj lexime edhe në person dhe online për të lehtësuar ju."
+                    "q": "Pyetje: Si mund të marr një lexim të Tarotit me ju?",
+                    "a": "Përgjigje: Planifikimi i një leximi të Tarotit me mua është i lehtë! Mund të vizitoni faqen time të internetit dhe të navigoni në faqen 'Rezervo një Lexim', ku do të gjeni kohën e disponueshme. Thjesht zgjidhni një datë të lirë dhe rezervoni leximin. Leximet i ofroj nëpërmjet internetit për me shumë lehtësi për ju që ju të merrni shërbimin pavarësisht se ku ndodheni."
                 },
                 {
                     "q": "Pyetje: Sa kohë zakonisht merr të marrësh një lexim?",
-                    "a": "Përgjigje: Pasi konfirmohet pagesa juaj, përpjekem të ofroj shërbim të shpejtë dhe të kohëzgjatë. Varësisht nga kërkesa aktuale, zakonisht mund të prisni të merrni leximin tuaj të Tarotit brenda disa ditësh. Prioritetoj ofrimin e leximeve cilësore ndërsa siguroj që çdo klient të marrë vëmendjen dhe fokusin që zë. Mund të jeni të sigurtë që do të bëj çdo përpjekje për të ofruar leximin tuaj sa më shpejt të jetë e mundur."
+                    "a": "Përgjigje: Pasi konfirmohet pagesa juaj, përpiqem të ofroj shërbim sa më shpejt të jetë e mundur. Në varësi të kërkesës që kam, zakonisht mund të prisni të merrni leximin tuaj të Tarotit brenda dy ditësh maksimumi. Kjo varet dhe nga mënyra e pagesës. Prioriteti im eshte ofrimi i leximeve cilësore ndërsa siguroj që çdo klient të marrë vëmendjen dhe fokusin e duhur. Mund të jeni të sigurtë që do të bëj çdo përpjekje për të ofruar leximin tuaj sa më shpejt të jetë e mundur. Kini parasysh se nuk bëj lexime nëse pagesa nuk është kryer paraprakisht, për të shmangur personat që duan të marrin leximin dhe mos paguajnë. Leximi më merr shumë kohë dhe energji nga jeta ime e përditshme."
+                },
+                {
+                  "q": "Pyetje: Si mund ta realizoj pagesën?",
+                  "a": "Pergjigje: Pagesën mund ta realizoni me PayPal, Wise ose WesternUnion dhe Moneygram. Pasi dërgohet pagesa dhe une e marr, do filloj të punoj për rastin tënd. Me PayPal është mënyra më e shpejtë. Nese zgjidhni WesternUnion ose MoneyGram duhet te keni parasysh që nuk e marr dot pagesën në fundjave ose ne ditë festash prandaj do ju duhet të prisni."
+                },
+                {
+                  "q":"Pyetje: A mund te marr leximin pastaj të paguaj?",
+                  "a": "Jo une nuk procedoj në atë mënyrë. Për shkak të shume rasteve që e marrin shërbimin dhe vendosin të mbyllin komunikimin unë nuk pranoj shërbim paraprak nëse nuk e kam marrë pagesën fillimisht. Leximi më merr shumë kohë nga jeta ime e përditshme dhe energji gjithashtu. "
+                },
+                {"q":"A bëni lexime falas?",
+                 "a":"Leximet e mia janë me pagesë por shpesh bej shorte dhe giveaway të ndryshme për lexime falas. Më ndiqni në mediat sociale për të mos i humbur këto mundësi."
                 },
                 {
                     "q": "Pyetje: Pse duhet të më besoni?",
-                    "a": "Përgjigje: Si lexues i Tarotit, vlerësoj besimin dhe konfidencialitetin e klientëve të mi. Kam njohuri të gjera dhe përvojë në leximin e Tarotit dhe iu përcjell secilës seancë me empati, respekt dhe pa gjykim. Përpjekem të ofroj lexime të saktë dhe frytdhënëse që mund të ju udhëzojnë dhe fuqizojnë. Për më tepër, mbaj një kod etik profesional që siguron privatësinë dhe konfidencialitetin tuaj gjatë procesit."
+                    "a": "Përgjigje: Si lexuese e Tarotit, vlerësoj besimin dhe konfidencialitetin e klientëve të mi. Kam njohuri të gjera dhe përvojë në leximin e Tarotit dhe iu përcjell secilës seancë me empati, respekt dhe pa gjykim. Përpjekem të ofroj lexime të sakta dhe frymëzuese që mund të ju udhëzojnë dhe japin fuqi për të mposhtur sfidat. Për më tepër, i përmbahem një kodi etik profesional që siguron privatësinë dhe konfidencialitetin tuaj gjatë procesit."
                 }
             ]
         },
         "footer": {
-            "title": "Çajin tuaj i Ditarit?",
+            "title": "Jeni të interesuar?",
             "body": "Na ndiqni në mediat sociale për përditësime dhe lexime të Tarotit.",
             "to-top": "Kthehu lart ↑",
             "rights": "Të gjitha të drejtat e rezervuara"

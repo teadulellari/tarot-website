@@ -18,9 +18,10 @@ export interface TextDB {
   
   export interface Readingdata {
     "love-reading": LoveReading
-    "general-reading": GeneralReading
+    "finances-reading": FinancesReading
     "decision-making-reading": DecisionMakingReading
     "spiritual-guidance-reading": SpiritualGuidanceReading
+    "short-reading": ShortReading
   }
   
   export interface LoveReading {
@@ -30,7 +31,7 @@ export interface TextDB {
     reasonsToChoose: string[]
   }
   
-  export interface GeneralReading {
+  export interface FinancesReading {
     title: string
     price: string
     description: string
@@ -45,6 +46,13 @@ export interface TextDB {
   }
   
   export interface SpiritualGuidanceReading {
+    title: string
+    price: string
+    description: string
+    reasonsToChoose: string[]
+  }
+
+  export interface ShortReading {
     title: string
     price: string
     description: string
@@ -88,6 +96,8 @@ export interface TextDB {
     "reading-3-action": string
     "reading-4": string
     "reading-4-action": string
+    "reading-5": string
+    "reading-5-action": string
     "expertise-title": string
     "expertise-1": string
     "expertise-2": string
