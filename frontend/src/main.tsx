@@ -7,6 +7,7 @@ import ReadingDetails from './components/ReadingDetails';
 import AboutMe from './components/AboutMe';
 import NavigationBar from './components/NavigationBar';
 import textData from './data/language.json';
+import ClientForm from "./components/ClientForm";
 import { TextDB } from './Types';
 import { TextDBContext } from './components/contexts/TextDBContext';
 
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/reading/:readingType/details" element={<ReadingDetails scrollTo={scrollToSection} />} />
         <Route path="/about-me/" element={<AboutMe />}/>
+        <Route path="/conatactForm" element={<ClientForm />} />
       </Routes>
     </BrowserRouter>
     </TextDBContext.Provider>
