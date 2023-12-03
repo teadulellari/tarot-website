@@ -42,7 +42,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/reading/:readingType/details" element={<ReadingDetails scrollTo={scrollToSection} />} />
         <Route path="/about-me/" element={<AboutMe />}/>
-        <Route path="/conatactForm" element={<ClientForm />} />
+        <Route path="/contactForm" element={<ClientForm />} />
       </Routes>
     </BrowserRouter>
     </TextDBContext.Provider>

@@ -14,16 +14,16 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbyVNuGuxC-k5t25klvI-DtuLrjXFPShqxeFvpFmlLcy2xH_THiFlKeLo5vBicVvI9kMBg/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycby1cUS4QTZA0_9asazhOd6ytfGbpX_epfUU8G-WxPsaT9BVXtPO5exLCfLyn1oCfxRyAg/exec', {
         method: 'POST',
         mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
+        headers:{
+            'Content-Type': 'text/plain;charset=utf-8',
         },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      if (response.status) {
         setSubmitStatus('Thank you for submitting the form. You will be contacted soon.');
         // Clear the form after successful submission
         setFormData({
@@ -50,7 +50,7 @@ const ContactForm = () => {
 
   return (
     <div className="bg-customColor1 min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-md bg-white p-8 rounded shadow-md">
+      <div className="w-full max-w-md bg-gray-200 p-8 rounded shadow-md">
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
             <label
