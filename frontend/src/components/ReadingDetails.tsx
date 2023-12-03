@@ -143,7 +143,7 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
                 </p>
                 <div className="mt-4">
                   <a
-                    href="https://calendly.com/teadulellari/tarot-reading"
+                    href="/contactForm"
                     className="inline-block px-6 py-3 text-customColor1 bg-customColor2 rounded-lg hover:bg-white hover:shadow-lg transition duration-300"
                     onClick={() => {
                       navigate(`/reading/${readingType}/details`);
