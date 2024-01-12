@@ -1,4 +1,5 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState, useContext, SetStateAction } from 'react';
+import { TextDBContext } from "./contexts/TextDBContext";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -6,7 +7,10 @@ const ContactForm = () => {
     contactPreference: '',
     contactInfo: '',
     message: '',
+    feedback: ''
   });
+
+  const textDB = useContext(TextDBContext);
 
   const [submitStatus, setSubmitStatus] = useState('');
 
@@ -24,13 +28,20 @@ const ContactForm = () => {
       });
 
       if (response.status) {
-        setSubmitStatus('Thank you for submitting the form. You will be contacted soon.');
+        // Check if textDB.form is defined before using it
+        if (textDB.form) {
+          setSubmitStatus(textDB.form?.feedback as SetStateAction<string>);        } else {
+          console.error('Error: textDB.form is undefined');
+          setSubmitStatus('Form submitted successfully, but feedback is unavailable.');
+        }
+
         // Clear the form after successful submission
         setFormData({
           name: '',
           contactPreference: '',
           contactInfo: '',
           message: '',
+          feedback: ''
         });
       } else {
         setSubmitStatus('Form submission failed. Please try again later.');
@@ -51,18 +62,20 @@ const ContactForm = () => {
   return (
     <div className="bg-customColor1 min-h-screen flex items-center justify-center">
       <div className="w-full max-w-md bg-gray-200 p-8 rounded shadow-md">
+      <p className="text-sm text-red mb-4">
+{textDB.form?.note}        </p>
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
             <label
               htmlFor="name"
               className="block text-gray-700 font-semibold mb-2"
             >
-              Your Name
+              {textDB.form?.name}
             </label>
             <input
               type="text"
               name="name"
-              placeholder="Your Name"
+              placeholder={textDB.form?.name}
               value={formData.name}
               onChange={handleChange}
               required
@@ -74,7 +87,7 @@ const ContactForm = () => {
               htmlFor="contactPreference"
               className="block text-gray-700 font-semibold mb-2"
             >
-              Contact Preference
+              {textDB.form?.contactPref}
             </label>
             <select
               name="contactPreference"
@@ -94,7 +107,7 @@ const ContactForm = () => {
               htmlFor="contactInfo"
               className="block text-gray-700 font-semibold mb-2"
             >
-              Leave your Contact Info
+             {textDB.form?.contactInfo}
             </label>
             <textarea
               name="contactInfo" 
@@ -110,7 +123,7 @@ const ContactForm = () => {
               htmlFor="message"
               className="block text-gray-700 font-semibold mb-2"
             >
-              Your Message
+              {textDB.form?.message}
             </label>
             <textarea
               name="message"
@@ -125,7 +138,7 @@ const ContactForm = () => {
             type="submit"
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
           >
-            Submit
+            {textDB.form?.submit}
           </button>
         </form>
         {submitStatus && (

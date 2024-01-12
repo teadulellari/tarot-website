@@ -7,6 +7,7 @@ export interface TextDB {
     reviews: Review[]
     faq: Faq
     footer: Footer
+    form?: Form
   }
   
   export interface Navigationbar {
@@ -128,5 +129,14 @@ export interface TextDB {
     body: string
     "to-top": string
     rights: string
+  }
+  export interface Form {
+    note: string
+    name: string
+    contactPref: string
+    contactInfo: string
+    message: string
+    submit: string
+    feedback: String
   }
   

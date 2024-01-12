@@ -69,7 +69,7 @@
             "body-1-2":"I prefer to be called Tea Leaf, and I invite you to join me on a journey that spans generations and is steeped in ancient wisdom.",
             "body-1-3":"My connection to tarot readings began long before I could even pronounce the word \"tarot.\" As a child, I was fascinated by the mystical and magical aura that surrounded my family's gatherings. It was during these gatherings that I would witness my grandmother, a revered and gifted medium, delve into the depths of the cards to unveil secrets of the past, insights into the present, and glimpses into the future.",
             "body-2":"My grandmother's tarot sessions were like windows to the soul. I would sit at her feet, wide-eyed and curious, as she shuffled the cards with a grace that can only come from years of practice. Her hands, weathered by time, held the keys to unlocking the mysteries of the universe. She taught me that tarot was not just about the cards; it was a sacred connection to the divine, a way to understand the intricate dance between destiny and free will. As I grew older, my fascination with tarot readings deepened. I voraciously studied the symbolism, the archetypes, and the esoteric meanings hidden within each card. I sought guidance from my grandmother, who lovingly nurtured my budding talent and instilled in me the belief that intuition and empathy were the keys to unlocking the true power of the tarot.",
-            "body-3":"The years passed, and my journey led me to explore spirituality, meditation, and the interconnectedness of all things. My family's generational connection to tarot readings became a profound part of my identity, and I realized that I was not just continuing a tradition; I was embarking on a spiritual awakening. Today, I am honored to share my gifts with you. My mission is to provide you with genuine and insightful tarot readings that empower you to make positive changes in your life. Each reading is a personalized experience, carefully crafted to address your unique questions and concerns. I invite you to explore the world of tarot with me, to uncover the mysteries of your own journey, and to embrace the magic that tarot can bring into your life.",
+            "body-3":"The years passed, and my journey led me to explore spirituality, meditation, and the interconnectedness of all things. My family's generational connection to tarot readings became a profound part of my identity, and I realized that I was not just continuing a tradition; I was embarking on a spiritual awakening. I have carried my grandmother's legacy by going deeper into divination and cartomancy practices. Today, I am honored to share my gifts with you. My mission is to provide you with genuine and insightful tarot readings that empower you to make positive changes in your life. Each reading is a personalized experience, carefully crafted to address your unique questions and concerns. I invite you to explore the world of tarot with me, to uncover the mysteries of your own journey, and to embrace the magic that tarot can bring into your life.",
             "action-1":"And remember, I won't just be a stranger interpreting cards for you. I am open to being your friend and spiritual companion on this incredible journey of self-discovery.",
             "action-2":"If you ever feel the need to connect, discuss, or simply share your thoughts, know that I am here for you."
         },
@@ -226,6 +226,16 @@
             "body":"Follow us on social media for updates and tarot readings.",
             "to-top":"Back to Top ↑",
             "rights":"All Rights Reserved"
+        },
+        "form":{
+          "note" : "Please note that the services are for a fee. We do not offer free services, except for giveaways on social media. We accept payments with Westernunion, Moneygram, Ria or Paypal. After you have made the payment, we reserve a convenient time for a reading.",
+          "name": "Name",
+          "contactPref": "Contact Preference",
+          "contactInfo": "Contact Info",
+          "message": "Your Message",
+          "submit" : "Submit",
+          "feedback": "Thank you for your interest, I will contact you ASAP!"
+
         }
     },
     "tr":{
@@ -298,7 +308,7 @@
             "body-1-2":"Beni Çay Yaprak olarak çağırmayı tercih ediyorum ve sizi kuşaklar boyu uzanan ve eski bilgelikle sarmalanmış bir yolculuğa davet ediyorum.",
             "body-1-3":"Tarot okumalarıyla olan bağlantım, \"tarot\" kelimesini telaffuz etmeye başlayabileceğimden çok önce başladı. Çocukken aile toplantılarımın etrafını saran gizemli ve sihirli bir hava beni büyüledi. Bu toplantılarda büyükanne olarak kabul edilen ve yetenekli bir medyum olan büyükannemi, geçmişin sırlarını, bugünün içgörülerini ve geleceğe dair bakışları açığa çıkarmak için kartların derinliklerine daldığını gözlemledim.",
             "body-2":"Büyükannemin tarot oturumları, ruhun pencereleri gibiydi. Onun yılların pratiğiyle yalnızca gelirken kartları karıştıran bir zarafetle ayaklarının dibine otururdum. Zamanın yıpranmış elleri, evrenin sırlarını açmanın anahtarlarını tutardı. Bana tarotun sadece kartlarla ilgili olmadığını, aynı zamanda kader ile özgür irade arasındaki karmaşık dansı anlamanın kutsal bir bağlantı olduğunu öğretti. Yaşlandıkça, tarot okumalarına olan ilgim derinleşti. Her kartın içinde gizli semboller, arketipler ve esoterik anlamları coşkuyla inceledim. Büyükannemden rehberlik aldım, çiçeğin açmaya başladığı yeteneğimi sevgiyle besledi ve benim için sezgi ve empatinin gerçek gücünü açmanın anahtarlarının olduğuna inancı aşıladı.",
-            "body-3":"Yıllar geçti ve yolculuğum beni ruhsallık, meditasyon ve her şeyin bağlantılılığını keşfetmeye yönlendirdi. Ailemin kuşaklar boyu tarot okumalarına olan bağlantısı, kimliğimin derin bir parçası haline geldi ve sadece bir gelenek devam ettirmiyordum; ruhsal bir uyanışa adım atıyordum. Bugün, size yeteneklerimi paylaşmaktan onur duyuyorum. Misyonum, sizi pozitif değişiklikler yapma konusunda yetenekli ve içgörülü tarot okumaları sunmaktır. Her okuma, benzersiz sorularınızı ve endişelerinizi ele alacak şekilde özenle hazırlanmış bir deneyimdir. Benimle birlikte tarot dünyasını keşfetmeye, kendi yolculuğunuzun sırlarını ortaya çıkarmaya ve tarotun hayatınıza getirebileceği sihri kucaklamaya davet ediyorum.",
+            "body-3":"Yıllar geçti ve yolculuğum beni ruhsallık, meditasyon ve her şeyin bağlantılılığını keşfetmeye yönlendirdi. Ailemin kuşaklar boyu tarot okumalarına olan bağlantısı, kimliğimin derin bir parçası haline geldi ve sadece bir gelenek devam ettirmiyordum; ruhsal bir uyanışa adım atıyordum. Bugün, size yeteneklerimi paylaşmaktan onur duyuyorum. Misyonum, sizi pozitif değişiklikler yapma konusunda yetenekli ve içgörülü tarot okumaları sunmaktır. Her okuma, benzersiz sorularınızı ve endişelerinizi ele alacak şekilde özenle hazırlanmış bir deneyimdir. Kehanet ve haritacılık uygulamalarının derinliklerine inerek büyükannemin mirasını taşıdım. Benimle birlikte tarot dünyasını keşfetmeye, kendi yolculuğunuzun sırlarını ortaya çıkarmaya ve tarotun hayatınıza getirebileceği sihri kucaklamaya davet ediyorum.",
             "action-1":"Ve unutmayın, sadece size kartları yorumlayan bir yabancı olmayacağım. Bu öz-keşfin inanılmaz yolculuğunda sizin arkadaşınız ve manevi yol arkadaşınız olmaktan açık olduğumu bilin.",
             "action-2":"Herhangi bir bağlantı kurma, tartışma veya sadece düşüncelerinizi paylaşma ihtiyacı hissettiğinizde, burada olduğumu bilin."
         },
@@ -455,6 +465,15 @@
             "body": "Güncellemeler ve tarot okumaları için sosyal medya hesaplarımızı takip edin.",
             "to-top": "Başa Dön ↑",
             "rights": "Tüm Hakları Saklıdır"
+        },
+        "form":{
+          "note" : "Hizmetlerin ücretli olduğunu lütfen unutmayın. Sosyal ağlarda kısa süreler dışında ücretsiz hizmet sunmuyoruz. Westernunion, Moneygram, Ria veya Paypal ile siteleri kabul ediyoruz. Ödemeyi yaptıktan sonra bir saatlik okuma ayırıyoruz.",
+          "name": "isim",
+          "contactPref": "İletişim Tercihi",
+          "contactInfo": "iletişim bilgileri",
+          "message": "Mesajın",
+          "submit" : "göndermek",
+          "feedback": "İlginiz için teşekkür ederim, en kısa sürede sizinle iletişime geçeceğim!"
         }
     },
     "al":{
@@ -527,7 +546,7 @@
             "body-1-2":"Unë preferoj të quhem Tea Leaf dhe ju ftoj të bashkoheni me mua në një udhëtim që përfshin breza dhe është i zhytur në mençurinë e lashtë.",
             "body-1-3":"Lidhja ime me leximet e tarotit filloi shumë përpara se të mund të shqiptoja fjalën \"tarot.\"  Si fëmijë, isha magjepsur nga atmosfera mistike dhe magjike që rrethonte mbledhjet e familjes sime. Pikërisht gjatë këtyre mbledhjeve do të dëshmoja se gjyshja ime, një medium i nderuar dhe i talentuar, gërmonte në thellësi të letrave për të shpalosur sekretet e së kaluarës, njohuri për të tashmen dhe për të parë të ardhmen.",
             "body-2":"Seancat e tarotit të gjyshes sime ishin si dritare në shpirt. Unë ulesha në këmbët e saj, me sy të hapur dhe kureshtar, ndërsa ajo përziente letrat me një hijeshi që mund të vijë vetëm nga vite ekseperiencë. Duart e saj, të lodhura nga koha, mbanin çelësat për të shpalosur misteret e universit. Ajo më mësoi se tarot nuk kishte të bënte vetëm me letrat; ishte një lidhje e shenjtë me hyjnoren, një mënyrë për të kuptuar vallëzimin e ndërlikuar mes fatit dhe vullnetit të lirë. Ndërsa rritesha, magjepsja ime me leximet e tarotit u thellua. Kam studiuar me pasion simbolikën, arketipet dhe kuptimet ezoterike të fshehura brenda çdo letre. Kërkova udhëzime nga gjyshja ime, e cila ushqeu me dashuri talentin tim të ri dhe më rrënjosi besimin se intuita dhe ndjeshmëria ishin çelësat për të shpalosur fuqinë e vërtetë të tarotit.",
-            "body-3":"Vitet kaluan dhe udhëtimi im më çoi të eksploroja spiritualitetin, meditimin dhe ndërlidhjen e të gjitha gjërave. Lidhja e familjes sime me leximet tarot u bë një pjesë e thellë e identitetit tim dhe kuptova se nuk po vazhdoja vetëm një traditë; Po hyja në një zgjim shpirtëror. Sot kam nderin të ndaj dhuratat e mia me ju. Misioni im është t'ju ofroj lexime të vërteta dhe të thella tarot që ju fuqizojnë të bëni ndryshime pozitive në jetën tuaj. Çdo lexim është një përvojë e personalizuar, e krijuar me kujdes për të adresuar pyetjet dhe shqetësimet tuaja unike. Ju ftoj të eksploroni botën e tarotit me mua, të zbuloni misteret e udhëtimit tuaj dhe të përqafoni magjinë që tarot mund të sjellë në jetën tuaj.",
+            "body-3":"Vitet kaluan dhe udhëtimi im më çoi të eksploroja spiritualitetin, meditimin dhe ndërlidhjen e të gjitha gjërave. Lidhja e familjes sime me leximet tarot u bë një pjesë e thellë e identitetit tim dhe kuptova se nuk po vazhdoja vetëm një traditë; Po hyja në një zgjim shpirtëror. Unë e kam bartur trashëgiminë e familjes sime duke u thelluar me teper në praktikat e spiritualizmit dhe kartomancisë. Pervec Tarot, ofroj dhe teknika tetjera te leximeve te letrave qe jane me precize. Sot kam nderin të ndaj dhuratat e mia me ju. Misioni im është t'ju ofroj lexime të vërteta dhe të thella tarot që ju fuqizojnë të bëni ndryshime pozitive në jetën tuaj. Çdo lexim është një përvojë e personalizuar, e krijuar me kujdes për të adresuar pyetjet dhe shqetësimet tuaja unike. Ju ftoj të eksploroni botën e tarotit me mua, të zbuloni misteret e udhëtimit tuaj dhe të përqafoni magjinë që tarot mund të sjellë në jetën tuaj.",
             "action-1":"Dhe kujtoni, nuk do të jem thjesht një e panjohur që interpreton letrat për ju. Jam e hapur të jem miq ne këtë udhëtim të mrekullueshëm të zbulimit të vetvetes.",
             "action-2":"Nëse ndonjëherë ndjeni nevojën për te folur, diskutuar ose thjesht të ndani mendimet tuaja, dijeni se unë jam këtu për ju. Do bëj të pamundurën t'ju kthen përgjigje sa me shpejt duke marre ne kosiderate dhe ngarkesen e punes qe kam."
         },
@@ -684,6 +703,15 @@
             "body": "Na ndiqni në mediat sociale për përditësime dhe lexime të Tarotit.",
             "to-top": "Kthehu lart ↑",
             "rights": "Të gjitha të drejtat e rezervuara"
-        }        
+        },
+        "form":{
+          "note" : "Ju lutem vini re se sherbimet jane kundrejt nje pagese. Nuk ofrojme sherbime falas, pervec rasteve te shorteve ne rrjetet sociale. Pranojme pagesa me Westernunion, Moneygram, Ria ose Paypal. Pasi te keni bere pagesen rezervojme nje ore te leximit.",
+          "name": "Emri Juaj",
+          "contactPref": "Preferenca e Kontaktit",
+          "contactInfo": "Numri juaj/ Instagrami",
+          "message": "Mesazhi Juaj",
+          "submit" : "Dergo",
+          "feedback": "Faleminderit per interesimin. Do ju kontaktoj sa me shpejt te mundem."
+        }       
     }
 }
