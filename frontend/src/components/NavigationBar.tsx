@@ -80,12 +80,12 @@ const NavigationBar: React.FC<NavigationBarProps> = ({scrollTo, changeLang}) => 
               src="https://img.icons8.com/external-smashingstocks-outline-color-smashing-stocks/66/external-Tarot-magic-and-fairy-tales-smashingstocks-outline-color-smashing-stocks.png"
               alt="external-Tarot-magic-and-fairy-tales-smashingstocks-outline-color-smashing-stocks"
             />
-            <a
-              href="/contactForm"
+            <Link
+              to="/contactForm"
               className="inline-block px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-white hover:bg-indigo-500 mt-4 lg:mt-0"
             >
               {textDB.navigationbar.book}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -6,6 +6,8 @@ import Me from "../assets/aboutMe.jpeg";
 import TarotIllustration from "../assets/readingImage.png";
 import MyAltar from "../assets/myAltar.jpg";
 import { TextDBContext } from "./contexts/TextDBContext";
+import { Link } from "react-router-dom";
+
 
 const AboutMe: React.FC = () => {
   const textDB = useContext(TextDBContext);
@@ -62,12 +64,12 @@ const AboutMe: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <a
-              href="/contactForm"
+            <Link
+              to="/contactForm"
               className="inline-block px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-white hover:bg-indigo-500 mt-4 lg:mt-0"
             >
               {textDB.navigationbar.book}
-            </a>
+            </Link>
           </div>
         </RevealOnScroll>
       </div>
