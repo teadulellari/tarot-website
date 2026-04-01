@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -10,6 +11,7 @@ import textData from './data/language.json';
 import ClientForm from "./components/ClientForm";
 import { TextDB } from './Types';
 import { TextDBContext } from './components/contexts/TextDBContext';
+import PoliciesPage from "./components/PoliciesPage";
 
 const scrollToSection = (sectionId: string) => {
   setTimeout(() => {
@@ -33,7 +35,7 @@ const browserLang = () => {
 
 const App = () => {
   const [lang, setLang]= useState< "en" | "al" | "tr" >(browserLang())
-  let textDB: TextDB = textData[lang]
+  const textDB: TextDB = textData[lang]
   return (
     <TextDBContext.Provider value={textDB}>
     <BrowserRouter>
@@ -43,6 +45,7 @@ const App = () => {
         <Route path="/reading/:readingType/details" element={<ReadingDetails scrollTo={scrollToSection} />} />
         <Route path="/about-me/" element={<AboutMe />}/>
         <Route path="/contactForm" element={<ClientForm />} />
+        <Route path="/policies" element={<PoliciesPage />} />
       </Routes>
     </BrowserRouter>
     </TextDBContext.Provider>

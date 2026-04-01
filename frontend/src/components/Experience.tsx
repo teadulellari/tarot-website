@@ -1,65 +1,43 @@
-import React, { useContext, useEffect } from "react";
-import Alpine from "alpinejs";
-import hands from '../assets/hands1.png';
-import feather from '../assets/feather1.png';
-import wand from '../assets/wand1.png';
-import { TextDBContext } from "./contexts/TextDBContext";
+import React from "react";
 
-const Experience = () => {
-  useEffect(() => {
-    // Initialize Alpine.js when the component mounts
-    Alpine.start();
-  }, []);
+const standards = [
+  {
+    title: "Clear Scope",
+    text: "Each product page defines what is included, delivery format, and expected timeline before purchase.",
+  },
+  {
+    title: "Fast Support",
+    text: "Customer messages are answered within 48 hours on business days via email or direct contact form.",
+  },
+  {
+    title: "Transparent Policies",
+    text: "Refund, privacy, and service disclaimer policies are published and accessible from every page.",
+  },
+];
 
-  const textDB = useContext(TextDBContext); 
-
+const Experience: React.FC = () => {
   return (
-    <div className="mt-20 px-6 py-20 bg-customColor1">
-      <div className="text-customColor2 text-center">
-        <h1 className="text-2xl font-bold mb-12">{textDB.homepage["expertise-title"]}</h1>
+    <section className="mt-20 px-6 py-14 bg-customColor1">
+      <div className="text-customColor2 text-center max-w-[900px] mx-auto">
+        <h2 className="text-2xl font-bold">Service Standards</h2>
+        <p className="mt-3 text-sm md:text-base">
+          The business is structured around clear communication, documented
+          policies, and dependable digital delivery.
+        </p>
       </div>
-      <div className="antialiased flex flex-col md:flex-row items-center justify-evenly text-center text-customColor2">
-        <div className="w-48 mb-8 md:mb-0"> 
-          <img src={hands} alt="hands" className="w-[100px] h-[100px] mx-auto" />
-          <div
-            x-data="{ counter: 0, finalCount: 20000 }"
-            className="text-3xl font-bold text-customColor2"
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 max-w-[1000px] mx-auto">
+        {standards.map((standard) => (
+          <article
+            key={standard.title}
+            className="bg-customColor2 text-customColor1 rounded-lg p-5 shadow-md"
           >
-            <span x-text="counter + '+'"></span>
-            <span
-              x-init="() => { setInterval(() => { counter < finalCount ? counter += 100 : clearInterval(this) }, 60) }"
-            ></span>
-          </div>
-          <p>{textDB.homepage["expertise-1"]}</p>
-        </div>
-        <div className="w-48 mb-8 md:mb-0">
-          <img src={feather} alt="feather" className="w-[100px] h-[100px] mx-auto" />
-          <div
-            x-data="{ counter: 0, finalCount: 97 }"
-            className="text-3xl font-bold text-customColor2"
-          >
-            <span x-text="counter + '%'"></span>
-            <span
-              x-init="() => { setInterval(() => { counter < finalCount ? counter++ : clearInterval(this) }, 80) }"
-            ></span>
-          </div>
-          <p>{textDB.homepage["expertise-2"]}</p>
-        </div>
-        <div className="w-48">
-          <img src={wand} alt="wand" className="w-[100px] h-[100px] mx-auto" />
-          <div
-            x-data="{ counter: 0, finalCount: 10 }"
-            className="text-3xl font-bold text-customColor2"
-          >
-            <span x-text="counter + '+'"></span>
-            <span
-              x-init="() => { setInterval(() => { counter < finalCount ? counter++ : clearInterval(this) }, 100) }"
-            ></span>
-          </div>
-          <p>{textDB.homepage["expertise-3"]}</p>
-        </div>
+            <h3 className="text-lg font-semibold">{standard.title}</h3>
+            <p className="mt-2 text-sm">{standard.text}</p>
+          </article>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

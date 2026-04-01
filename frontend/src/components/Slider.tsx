@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import Review from "./Review";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { TextDBContext } from "./contexts/TextDBContext";
@@ -20,19 +20,19 @@ const Slider: React.FC<SliderProps> = ({ reviews }) => {
   const totalPages = Math.ceil(reviews.length / reviewsPerPage);
   const textDB = useContext(TextDBContext); 
 
+  const nextReviews = useCallback(() => {
+    setCurrentPage((prevPage) =>
+      prevPage === totalPages - 1 ? 0 : prevPage + 1
+    );
+  }, [totalPages]);
+
   useEffect(() => {
     const interval = setInterval(nextReviews, 7000);
 
     return () => {
       clearInterval(interval);
     };
-  }, []);
-
-  const nextReviews = () => {
-    setCurrentPage((prevPage) =>
-      prevPage === totalPages - 1 ? 0 : prevPage + 1
-    );
-  };
+  }, [nextReviews]);
 
   const prevReviews = () => {
     setCurrentPage((prevPage) =>

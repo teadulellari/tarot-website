@@ -137,6 +137,6 @@ export interface TextDB {
     contactInfo: string
     message: string
     submit: string
-    feedback: String
+    feedback: string
   }
   

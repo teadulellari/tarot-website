@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { FaInstagram, FaFacebook, FaTiktok, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { TextDBContext } from "./contexts/TextDBContext";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   // Function to scroll to the top of the page
@@ -61,6 +62,20 @@ const Footer = () => {
           <span className="text-customColor2 mx-2">|</span>
           <p className="mx-2"> {textDB.footer.rights}</p>
         </div>
+        <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm">
+          <Link to="/policies" className="hover:underline">
+            Trust & Policies
+          </Link>
+          <Link to="/contactForm" className="hover:underline">
+            Customer Support
+          </Link>
+          <a href="mailto:hello@tarotcardread.com" className="hover:underline">
+            hello@tarotcardread.com
+          </a>
+        </div>
+        <p className="mt-3 text-xs opacity-80">
+          Business location: Albania | Intended for adults (18+) | Entertainment and personal reflection only.
+        </p>
       </div>
     </footer>
   );

@@ -1,12 +1,11 @@
-import { FC, useContext, useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { FC, useContext, useEffect } from "react";
+import { Link, useLocation, useParams } from "react-router-dom";
 import theLovers from "../assets/TheLovers1.png";
 import theEmpress from "../assets/TheLovers2.png";
 import twoOfSwords from "../assets/TheLovers3.png";
 import aceOfPnt from "../assets/TheLovers4.png";
 import SuggestionCard from "./SuggestionCard"; 
 import theMoon from "../assets/TheMoon.png"
-import { useNavigate } from "react-router-dom";
 import RevealOnScroll from "../HomePage/RevealOnScroll";
 import Footer from "./Footer";
 import { TextDBContext } from "./contexts/TextDBContext";
@@ -29,13 +28,12 @@ interface ReadingDetailsProps {
 
 const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
   const readingType = useParams<ReadingDetailsParams>()?.readingType;
-  const navigate = useNavigate();
   const location = useLocation();
   const textDB = useContext(TextDBContext); 
 
   useEffect(() => {
     scrollTo("top")
-  }, [location]);
+  }, [location, scrollTo]);
 
   const readingData: Record<string, ServiceProps> = {
     "love-reading": {
@@ -139,18 +137,16 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
 
               <div className="mt-6 md:mt-10 text-center">
                 <p className="text-base md:text-lg text-[#e1be8a]">
-                {textDB.readingdetails.actioncall}
+                  Request this service through the booking form. Policies are
+                  shown before submission.
                 </p>
                 <div className="mt-4">
-                  <a
-                    href="/contactForm"
+                  <Link
+                    to={`/contactForm?service=${encodeURIComponent(service.title)}`}
                     className="inline-block px-6 py-3 text-customColor1 bg-customColor2 rounded-lg hover:bg-white hover:shadow-lg transition duration-300"
-                    onClick={() => {
-                      navigate(`/reading/${readingType}/details`);
-                    }}
                   >
                     {textDB.readingdetails.actionbutton}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -84,7 +84,7 @@ const Services = () => {
                 img={theEmpress}
                 title={textDB.homepage["reading-2"]}
                 button={textDB.homepage["reading-2-action"]}
-                serviceLink="reading/finances-reading/details"
+                serviceLink="/reading/finances-reading/details"
               />
             </div>
             <div className="p-8">
@@ -92,7 +92,7 @@ const Services = () => {
                 img={twoOfSwords}
                 title={textDB.homepage["reading-3"]}
                 button={textDB.homepage["reading-3-action"]}
-                serviceLink="reading/decision-making-reading/details"
+                serviceLink="/reading/decision-making-reading/details"
               />
             </div>
             <div className="p-8">
@@ -100,7 +100,7 @@ const Services = () => {
                 img={aceOfPnt}
                 title={textDB.homepage["reading-4"]}
                 button={textDB.homepage["reading-4-action"]}
-                serviceLink="reading/spiritual-guidance-reading/details"
+                serviceLink="/reading/spiritual-guidance-reading/details"
               />
             </div>
           </div>

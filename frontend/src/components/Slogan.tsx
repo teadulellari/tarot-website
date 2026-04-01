@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextDBContext } from "./contexts/TextDBContext";
-interface SloganProps {}
-
-const Slogan: React.FC<SloganProps> = () => {
+const Slogan: React.FC = () => {
   const navigate= useNavigate();
   const textDB = useContext(TextDBContext); 
 

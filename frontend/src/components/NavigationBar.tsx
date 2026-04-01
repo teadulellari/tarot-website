@@ -59,6 +59,9 @@ const NavigationBar: React.FC<NavigationBarProps> = ({scrollTo, changeLang}) => 
               <li className="text-indigo-200 hover:text-white">
                 <Link to="/#contact" onClick={() => scrollTo("contact")}>{textDB.navigationbar.contact}</Link>
               </li>
+              <li className="text-indigo-200 hover:text-white">
+                <Link to="/policies">Policies</Link>
+              </li>
               <li>
                 <span className="fi fi-al mr-2" onClick={() => changeLang("al")}></span>
                 <span className="fi fi-us mr-2" onClick={() => changeLang("en")}></span>

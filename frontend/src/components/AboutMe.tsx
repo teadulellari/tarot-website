@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import RevealOnScroll from "../HomePage/RevealOnScroll";
 import Footer from "./Footer";
 import Grandma from "../assets/grandma.jpg";
-import Me from "../assets/aboutMe.jpeg";
 import TarotIllustration from "../assets/readingImage.png";
 import MyAltar from "../assets/myAltar.jpg";
 import { TextDBContext } from "./contexts/TextDBContext";
