@@ -1,95 +1,184 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo-no-background.svg";
 import { Link, useLocation } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { TextDBContext } from "./contexts/TextDBContext";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 interface NavigationBarProps {
-  scrollTo: (identifier: string) => void
-  changeLang: (lang: "en" | "al" | "tr") => void
+  scrollTo: (identifier: string) => void;
+  changeLang: (lang: "en" | "al" | "tr") => void;
 }
 
-const NavigationBar: React.FC<NavigationBarProps> = ({scrollTo, changeLang}) => {
+const NavigationBar: React.FC<NavigationBarProps> = ({ scrollTo, changeLang }) => {
   const [navbar, setNavbar] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const textDB = useContext(TextDBContext); 
+  const textDB = useContext(TextDBContext);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isHome = location.pathname === "/";
+  const navBg = scrolled || !isHome
+    ? "bg-midnight/90 backdrop-blur-xl border-b border-soft-lavender/10 shadow-lg shadow-black/20"
+    : "bg-transparent";
 
   return (
-    <nav id="top" className={location.pathname == "/" ? "w-full bg-transparent" : "w-full bg-customColor1"}>
-      <div className="justify-between mx-auto mb-30 md:flex md:items-center md:px-8 border-b border-white border-opacity-20">
-        <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <div className="flex items-center justify-center w-32 h-30 md:w-54 md:h-30 lg:w-64 lg:h-30">
-              <Link to="/" onClick={() => scrollTo("#")}>
-                <img src={logo} alt="Logo" className="object-contain h-full w-full" />
-              </Link>
-            </div>
-            <div className="md:hidden">
-              <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                onClick={() => setNavbar(!navbar)}
-              >
-                {navbar ? (
-                  <FaTimes className="w-6 h-6 text-white" />
-                ) : (
-                  <FaBars className="w-6 h-6 text-white" />
-                )}
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          className={`flex items-center justify-center md:justify-center flex-grow ${
-            navbar ? "mt-20" : ""
-          }`}
+    <nav
+      id="top"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${navBg}`}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+        {/* Logo */}
+        <Link
+          to="/"
+          onClick={() => scrollTo("#")}
+          className="flex items-center shrink-0"
         >
-          <div
-            className={`pb-3 md:block md:pb-0 md:mt-0 ${
-              navbar ? "" : "hidden"
-            }`}
-          >
-            <ul className="items-center justify-center space-y-8 md:flex md:space-x-20 md:space-y-0">
-              <li className="text-indigo-200 hover:text-white">
-                <Link to="/about-me/">{textDB.navigationbar.about}</Link>
-              </li>
-              <li className="text-indigo-200 hover:text-white">
-                <Link to="/#services" onClick={() => scrollTo("services")}>{textDB.navigationbar.readings}</Link>
-              </li>
-              <li className="text-indigo-200 hover:text-white">
-                <Link to="/#contact" onClick={() => scrollTo("contact")}>{textDB.navigationbar.contact}</Link>
-              </li>
-              <li className="text-indigo-200 hover:text-white">
-                <Link to="/policies">Policies</Link>
-              </li>
-              <li>
-                <span className="fi fi-al mr-2" onClick={() => changeLang("al")}></span>
-                <span className="fi fi-us mr-2" onClick={() => changeLang("en")}></span>
-                <span className="fi fi-tr mr-2" onClick={() => changeLang("tr")}></span>
-              </li>
-            </ul>
-          </div>
-        </div>
+          <img
+            src={logo}
+            alt="Tea Leaf Tarot"
+            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105"
+          />
+        </Link>
 
-        <div
-          className={`pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-            navbar ? "" : "hidden"
-          }`}
-        >
-          <div className="flex items-center justify-center space-x-3">
-            <img
-              width="66"
-              height="66"
-              src="https://img.icons8.com/external-smashingstocks-outline-color-smashing-stocks/66/external-Tarot-magic-and-fairy-tales-smashingstocks-outline-color-smashing-stocks.png"
-              alt="external-Tarot-magic-and-fairy-tales-smashingstocks-outline-color-smashing-stocks"
-            />
+        {/* Desktop Nav Links */}
+        <ul className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+          <li>
             <Link
-              to="/contactForm"
-              className="inline-block px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-white hover:bg-indigo-500 mt-4 lg:mt-0"
+              to="/about-me/"
+              className="text-soft-lavender/80 hover:text-gold transition-colors duration-300"
             >
-              {textDB.navigationbar.book}
+              {textDB.navigationbar.about}
             </Link>
-          </div>
+          </li>
+          <li>
+            <Link
+              to="/#services"
+              onClick={() => scrollTo("services")}
+              className="text-soft-lavender/80 hover:text-gold transition-colors duration-300"
+            >
+              {textDB.navigationbar.readings}
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/#contact"
+              onClick={() => scrollTo("contact")}
+              className="text-soft-lavender/80 hover:text-gold transition-colors duration-300"
+            >
+              {textDB.navigationbar.contact}
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/policies"
+              className="text-soft-lavender/80 hover:text-gold transition-colors duration-300"
+            >
+              Policies
+            </Link>
+          </li>
+
+          {/* Language flags */}
+          <li className="flex items-center gap-2 ml-2">
+            <button onClick={() => changeLang("al")} className="opacity-70 hover:opacity-100 transition-opacity">
+              <span className="fi fi-al text-base"></span>
+            </button>
+            <button onClick={() => changeLang("en")} className="opacity-70 hover:opacity-100 transition-opacity">
+              <span className="fi fi-us text-base"></span>
+            </button>
+            <button onClick={() => changeLang("tr")} className="opacity-70 hover:opacity-100 transition-opacity">
+              <span className="fi fi-tr text-base"></span>
+            </button>
+          </li>
+        </ul>
+
+        {/* CTA Button (desktop) */}
+        <Link
+          to="/contactForm"
+          className="hidden md:inline-flex btn-primary text-sm px-6 py-2.5"
+        >
+          {textDB.navigationbar.book}
+        </Link>
+
+        {/* Mobile Toggle */}
+        <button
+          className="md:hidden p-2 text-soft-lavender"
+          onClick={() => setNavbar(!navbar)}
+        >
+          {navbar ? <FaTimes className="w-5 h-5" /> : <FaBars className="w-5 h-5" />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+          navbar ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-6 pb-6 pt-2 bg-midnight/95 backdrop-blur-xl border-t border-soft-lavender/10">
+          <ul className="flex flex-col gap-4">
+            <li>
+              <Link
+                to="/about-me/"
+                onClick={() => setNavbar(false)}
+                className="block text-soft-lavender/80 hover:text-gold transition-colors py-2 text-lg"
+              >
+                {textDB.navigationbar.about}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/#services"
+                onClick={() => { scrollTo("services"); setNavbar(false); }}
+                className="block text-soft-lavender/80 hover:text-gold transition-colors py-2 text-lg"
+              >
+                {textDB.navigationbar.readings}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/#contact"
+                onClick={() => { scrollTo("contact"); setNavbar(false); }}
+                className="block text-soft-lavender/80 hover:text-gold transition-colors py-2 text-lg"
+              >
+                {textDB.navigationbar.contact}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/policies"
+                onClick={() => setNavbar(false)}
+                className="block text-soft-lavender/80 hover:text-gold transition-colors py-2 text-lg"
+              >
+                Policies
+              </Link>
+            </li>
+            <li className="flex items-center gap-3 py-2">
+              <button onClick={() => changeLang("al")} className="opacity-70 hover:opacity-100 transition-opacity">
+                <span className="fi fi-al text-lg"></span>
+              </button>
+              <button onClick={() => changeLang("en")} className="opacity-70 hover:opacity-100 transition-opacity">
+                <span className="fi fi-us text-lg"></span>
+              </button>
+              <button onClick={() => changeLang("tr")} className="opacity-70 hover:opacity-100 transition-opacity">
+                <span className="fi fi-tr text-lg"></span>
+              </button>
+            </li>
+            <li>
+              <Link
+                to="/contactForm"
+                onClick={() => setNavbar(false)}
+                className="btn-primary text-center text-sm w-full"
+              >
+                {textDB.navigationbar.book}
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

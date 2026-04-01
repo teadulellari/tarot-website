@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import Slogan from "../components/Slogan";
 import Services from "../components/Services";
 import Experience from "../components/Experience";
 import Footer from "../components/Footer";
-import RevealOnScroll from "./RevealOnScroll"; 
+import RevealOnScroll from "./RevealOnScroll";
 import PolarReadiness from "../components/PolarReadiness";
+import Slider from "../components/Slider";
+import Faq from "../components/FAQ";
+import { TextDBContext } from "../components/contexts/TextDBContext";
 
 const HomePage: React.FC = () => {
-  return (  
-    <div className="grid grid-rows-[auto,auto,1fr] gap-11">
-      <Slogan/>
+  const textDB = useContext(TextDBContext);
+
+  return (
+    <div className="flex flex-col">
+      <Slogan />
 
       <RevealOnScroll>
         <Services />
@@ -24,8 +29,14 @@ const HomePage: React.FC = () => {
       </RevealOnScroll>
 
       <RevealOnScroll>
-        <Footer />
+        <Slider reviews={textDB.reviews} />
       </RevealOnScroll>
+
+      <RevealOnScroll>
+        <Faq questions={textDB.faq.questions} />
+      </RevealOnScroll>
+
+      <Footer />
     </div>
   );
 };

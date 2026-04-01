@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { FaBuilding, FaBox, FaUndo, FaExclamationTriangle, FaUserShield } from "react-icons/fa";
 
 const policySections = [
   {
+    icon: FaBuilding,
     title: "Business Information",
     points: [
       "Business name: Tea Leaf Tarot",
@@ -14,6 +16,7 @@ const policySections = [
     ],
   },
   {
+    icon: FaBox,
     title: "Products and Fulfillment",
     points: [
       "Digital products are delivered instantly after successful payment.",
@@ -22,6 +25,7 @@ const policySections = [
     ],
   },
   {
+    icon: FaUndo,
     title: "Refund and Cancellation",
     points: [
       "Digital downloads are non-refundable after access is granted.",
@@ -31,6 +35,7 @@ const policySections = [
     ],
   },
   {
+    icon: FaExclamationTriangle,
     title: "Service Disclaimer",
     points: [
       "Content is intended for personal reflection and entertainment.",
@@ -40,6 +45,7 @@ const policySections = [
     ],
   },
   {
+    icon: FaUserShield,
     title: "Privacy",
     points: [
       "Only necessary customer data is collected for order delivery and support.",
@@ -51,37 +57,49 @@ const policySections = [
 
 const PoliciesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-customColor1 text-customColor2">
-      <main className="max-w-[1000px] mx-auto px-6 py-12">
-        <h1 className="text-3xl md:text-4xl font-semibold text-center">
-          Trust & Policies
-        </h1>
-        <p className="mt-4 text-center text-sm md:text-base">
-          This page is published to provide transparent business, policy, and
-          customer-support information.
-        </p>
+    <div className="min-h-screen pt-24">
+      <main className="max-w-3xl mx-auto px-6 pb-16">
+        <div className="text-center mb-14">
+          <h1 className="font-display text-3xl md:text-4xl font-bold text-gradient-gold mb-4">
+            Trust & Policies
+          </h1>
+          <div className="divider-gold w-24 mx-auto mb-4" />
+          <p className="text-soft-lavender/60 max-w-xl mx-auto text-sm md:text-base">
+            Published to provide transparent business, policy, and
+            customer-support information.
+          </p>
+        </div>
 
-        <div className="mt-10 space-y-6">
+        <div className="space-y-5">
           {policySections.map((section) => (
             <section
               key={section.title}
-              className="bg-customColor2 text-customColor1 rounded-lg p-5 shadow"
+              className="glass-card rounded-2xl p-6"
             >
-              <h2 className="text-xl font-semibold">{section.title}</h2>
-              <ul className="list-disc pl-6 mt-3 space-y-1 text-sm md:text-base">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center shrink-0">
+                  <section.icon className="w-4 h-4 text-gold" />
+                </div>
+                <h2 className="font-display text-lg font-semibold text-soft-lavender">
+                  {section.title}
+                </h2>
+              </div>
+              <ul className="space-y-2 pl-12">
                 {section.points.map((point) => (
-                  <li key={point}>{point}</li>
+                  <li
+                    key={point}
+                    className="text-soft-lavender/60 text-sm leading-relaxed relative before:content-[''] before:absolute before:-left-4 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-gold/30"
+                  >
+                    {point}
+                  </li>
                 ))}
               </ul>
             </section>
           ))}
         </div>
 
-        <div className="mt-8 text-center">
-          <Link
-            to="/contactForm"
-            className="inline-block px-5 py-2 rounded border border-customColor2 hover:bg-customColor2 hover:text-customColor1 transition"
-          >
+        <div className="mt-10 text-center">
+          <Link to="/contactForm" className="btn-primary text-sm">
             Contact Support
           </Link>
         </div>

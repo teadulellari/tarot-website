@@ -12,26 +12,23 @@ interface QuestionProps {
 }
 
 const Faq: React.FC<QuestionProps> = ({ questions }) => {
-  const textDB = useContext(TextDBContext); 
+  const textDB = useContext(TextDBContext);
 
   return (
-    <div className="container px-4 py-8 mx-auto mt-30 mb-40 max-w-[1000px] bg-customColor1">
-      <div>
-        <h1 className="text-customColor2 text-xl font-semibold mb-4 mt-4 text-center">
+    <section className="section-padding max-w-3xl mx-auto bg-midnight/70 backdrop-blur-sm rounded-3xl">
+      <div className="text-center mb-14">
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-gradient-gold mb-4">
           {textDB.homepage["faq-title"]}
-        </h1>
+        </h2>
+        <div className="divider-gold w-24 mx-auto" />
       </div>
-      <div className="mt-4 space-y-4 lg:mt-6">
+
+      <div className="space-y-3">
         {questions.map((question, index) => (
-          <div
-            key={index}
-            className="p-2 bg-customColor2 rounded-lg shadow-md mx-2"
-          >
-            <Question question={question} />
-          </div>
+          <Question key={index} question={question} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

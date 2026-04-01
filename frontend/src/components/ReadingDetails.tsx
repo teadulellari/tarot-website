@@ -4,11 +4,13 @@ import theLovers from "../assets/TheLovers1.png";
 import theEmpress from "../assets/TheLovers2.png";
 import twoOfSwords from "../assets/TheLovers3.png";
 import aceOfPnt from "../assets/TheLovers4.png";
-import SuggestionCard from "./SuggestionCard"; 
-import theMoon from "../assets/TheMoon.png"
+import SuggestionCard from "./SuggestionCard";
+import theMoon from "../assets/TheMoon.png";
 import RevealOnScroll from "../HomePage/RevealOnScroll";
 import Footer from "./Footer";
 import { TextDBContext } from "./contexts/TextDBContext";
+import { FaCheckCircle } from "react-icons/fa";
+
 interface ServiceProps {
   img: string;
   title: string;
@@ -23,16 +25,16 @@ interface ReadingDetailsParams {
 }
 
 interface ReadingDetailsProps {
-  scrollTo: (identifier: string) => void
+  scrollTo: (identifier: string) => void;
 }
 
-const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
+const ReadingDetails: FC<ReadingDetailsProps> = ({ scrollTo }) => {
   const readingType = useParams<ReadingDetailsParams>()?.readingType;
   const location = useLocation();
-  const textDB = useContext(TextDBContext); 
+  const textDB = useContext(TextDBContext);
 
   useEffect(() => {
-    scrollTo("top")
+    scrollTo("top");
   }, [location, scrollTo]);
 
   const readingData: Record<string, ServiceProps> = {
@@ -40,139 +42,150 @@ const ReadingDetails: FC<ReadingDetailsProps> = ({scrollTo}) => {
       img: theLovers,
       title: textDB.readingdata["love-reading"].title,
       price: textDB.readingdata["love-reading"].price,
-      description:textDB.readingdata["love-reading"].description,
-      reasonsToChoose: textDB.readingdata["love-reading"].reasonsToChoose
+      description: textDB.readingdata["love-reading"].description,
+      reasonsToChoose: textDB.readingdata["love-reading"].reasonsToChoose,
     },
     "finances-reading": {
       img: theEmpress,
       title: textDB.readingdata["finances-reading"].title,
       price: textDB.readingdata["finances-reading"].price,
-      description:textDB.readingdata["finances-reading"].description,
-      reasonsToChoose: textDB.readingdata["finances-reading"].reasonsToChoose
+      description: textDB.readingdata["finances-reading"].description,
+      reasonsToChoose: textDB.readingdata["finances-reading"].reasonsToChoose,
     },
     "decision-making-reading": {
       img: twoOfSwords,
       title: textDB.readingdata["decision-making-reading"].title,
       price: textDB.readingdata["decision-making-reading"].price,
-      description:textDB.readingdata["decision-making-reading"].description,
-      reasonsToChoose: textDB.readingdata["decision-making-reading"].reasonsToChoose
+      description: textDB.readingdata["decision-making-reading"].description,
+      reasonsToChoose: textDB.readingdata["decision-making-reading"].reasonsToChoose,
     },
     "spiritual-guidance-reading": {
       img: aceOfPnt,
       title: textDB.readingdata["spiritual-guidance-reading"].title,
       price: textDB.readingdata["spiritual-guidance-reading"].price,
-      description:textDB.readingdata["spiritual-guidance-reading"].description,
-      reasonsToChoose: textDB.readingdata["spiritual-guidance-reading"].reasonsToChoose
+      description: textDB.readingdata["spiritual-guidance-reading"].description,
+      reasonsToChoose: textDB.readingdata["spiritual-guidance-reading"].reasonsToChoose,
     },
     "short-reading": {
       img: theMoon,
       title: textDB.readingdata["short-reading"].title,
       price: textDB.readingdata["short-reading"].price,
-      description:textDB.readingdata["short-reading"].description,
-      reasonsToChoose: textDB.readingdata["short-reading"].reasonsToChoose
-    }
+      description: textDB.readingdata["short-reading"].description,
+      reasonsToChoose: textDB.readingdata["short-reading"].reasonsToChoose,
+    },
   };
 
   const service = readingType ? readingData[readingType] : null;
 
   if (!service) {
-    return <div>{textDB.readingdetails.error}</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center text-soft-lavender pt-20">
+        {textDB.readingdetails.error}
+      </div>
+    );
   }
 
-  // Define related readings for each reading type
   const relatedReadings: Record<string, string[]> = {
     "love-reading": ["finances-reading", "decision-making-reading", "spiritual-guidance-reading", "short-reading"],
     "finances-reading": ["love-reading", "decision-making-reading", "spiritual-guidance-reading", "short-reading"],
     "decision-making-reading": ["love-reading", "finances-reading", "spiritual-guidance-reading", "short-reading"],
     "spiritual-guidance-reading": ["love-reading", "finances-reading", "decision-making-reading", "short-reading"],
     "short-reading": ["love-reading", "finances-reading", "decision-making-reading", "spiritual-guidance-reading"],
-
   };
 
-  // Get related readings for the current reading type
   const suggestions = readingType ? relatedReadings[readingType] : [];
+
   return (
-    <div id="details" className="min-h-screen bg-customColor1 grid grid-rows-[auto,1fr,auto,auto] gap-10">
-      <section>
-      </section>
-      <section className="p-10">
-      <RevealOnScroll>
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            <div className="mx-auto w-full md:w-80 h-96 rounded-lg shadow-lg overflow-hidden text-center">
-              <img
-                src={service.img}
-                alt={service.title}
-                className="inline-block align-middle w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col justify-center items-center">
-              <h1 className="text-center text-2xl md:text-3xl font-semibold text-[#e1be8a]">
-                {service.title}
-              </h1>
-              <p className="text-base md:text-lg font-semibold mt-2 text-customColor1">
-                `{textDB.readingdetails.price}: {service.price}`
-              </p>
-
-              <div className="mt-6 md:mt-10">
-                <h2 className="text-center text-lg md:text-xl font-semibold text-[#e1be8a]">
-                {textDB.readingdetails.expect}
-                </h2>
-                <p className="list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
-                  {service.description}
-                </p>
+    <div className="min-h-screen pt-20">
+      {/* Hero Detail Section */}
+      <section className="section-padding">
+        <RevealOnScroll>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
+              {/* Image */}
+              <div className="relative group">
+                <div className="absolute -inset-4 rounded-3xl bg-gold/5 blur-2xl group-hover:bg-gold/10 transition-all duration-700" />
+                <div className="relative rounded-2xl overflow-hidden shadow-glass">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-full h-auto max-h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-midnight/40 to-transparent" />
+                </div>
               </div>
 
-              <div className="mt-6 md:mt-10">
-                <h2 className="text-lg md:text-xl font-semibold text-[#e1be8a] text-center">
-                {textDB.readingdetails.whyus}
-                </h2>
-                <ul className="list-disc pl-6 mt-2 text-base md:text-lg text-customColor2">
-                  {service.reasonsToChoose.map((reason, index) => (
-                    <li key={index}>{reason}</li>
-                  ))}
-                </ul>
-              </div>
+              {/* Content */}
+              <div className="flex flex-col">
+                <h1 className="font-display text-3xl md:text-4xl font-bold text-gradient-gold mb-3">
+                  {service.title}
+                </h1>
+                <div className="inline-flex items-center gap-2 mb-6">
+                  <span className="text-2xl font-bold text-gold">{service.price}</span>
+                </div>
 
-              <div className="mt-6 md:mt-10 text-center">
-                <p className="text-base md:text-lg text-[#e1be8a]">
+                <div className="divider-gold mb-6" />
+
+                <div className="mb-8">
+                  <h2 className="font-display text-lg font-semibold text-soft-lavender mb-3">
+                    {textDB.readingdetails.expect}
+                  </h2>
+                  <p className="text-soft-lavender/60 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+
+                <div className="mb-8">
+                  <h2 className="font-display text-lg font-semibold text-soft-lavender mb-3">
+                    {textDB.readingdetails.whyus}
+                  </h2>
+                  <ul className="space-y-2.5">
+                    {service.reasonsToChoose.map((reason, index) => (
+                      <li key={index} className="flex items-start gap-3 text-soft-lavender/60">
+                        <FaCheckCircle className="w-4 h-4 text-gold/70 shrink-0 mt-0.5" />
+                        <span>{reason}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <p className="text-sm text-soft-lavender/40 mb-4">
                   Request this service through the booking form. Policies are
                   shown before submission.
                 </p>
-                <div className="mt-4">
-                  <Link
-                    to={`/contactForm?service=${encodeURIComponent(service.title)}`}
-                    className="inline-block px-6 py-3 text-customColor1 bg-customColor2 rounded-lg hover:bg-white hover:shadow-lg transition duration-300"
-                  >
-                    {textDB.readingdetails.actionbutton}
-                  </Link>
-                </div>
+
+                <Link
+                  to={`/contactForm?service=${encodeURIComponent(service.title)}`}
+                  className="btn-primary text-center"
+                >
+                  {textDB.readingdetails.actionbutton}
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-      </RevealOnScroll>
+        </RevealOnScroll>
       </section>
-      <section className="related-readings mt-40 p-10">
+
+      {/* Related Readings */}
+      <section className="section-padding">
         <RevealOnScroll>
-          <div className="container mx-auto">
-            <h2 className="text-center text-xl md:text-2xl font-semibold text-[#e1be8a] mb-10">
-              {textDB.readingdetails.related}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-              {suggestions.map((readingType) => (
-                <SuggestionCard key={readingType} reading={readingData[readingType]} />
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-gradient-gold mb-4">
+                {textDB.readingdetails.related}
+              </h2>
+              <div className="divider-gold w-24 mx-auto" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {suggestions.map((rt) => (
+                <SuggestionCard key={rt} reading={readingData[rt]} />
               ))}
             </div>
           </div>
         </RevealOnScroll>
       </section>
-      <section className="mt-40">
-        <RevealOnScroll>
-        <Footer />
-        </RevealOnScroll>
-      </section>
+
+      <Footer />
     </div>
   );
 };
